@@ -4,19 +4,192 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>메인 페이지</title>
+
+
+<style>
+header {
+	width: 1024px;
+	height: 100px;
+	margin: 0px 0px 70px 0px;
+	padding: 10px;
+	background-color: #D5D5D5;
+}
+
+header>h1 {
+	text-align: center;
+	text-shadow: 5px 5px 5px gray;
+	font-size: 40px;
+	letter-spacing: 3px;
+}
+
+div {
+	width: 1024px;
+	height: 50px;
+	margin: 0px 0px 0px -10px;
+	padding: 10px;
+	border: thin solid black;
+	position: absolute;
+	top: 130px;
+}
+
+ul#list1 {
+	list-style: none;
+	width: 800px;
+	height: 70px;
+	position: absolute;
+	right: 50px;
+}
+
+#list1>li {
+	display: inline;
+	padding: 10px 30px 10px 30px;
+	background-color: #E8D9FF;
+	margin-left: 5px;
+	margin-right: -4px;
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+}
+
+#li7:HOVER {
+	background-color: #EAEAEA;
+	box-shadow: 0px 5px 0px gray;
+}
+
+#li8:HOVER {
+	background-color: #EAEAEA;
+	box-shadow: 0px 5px 0px gray;
+}
+
+#li9:HOVER {
+	background-color: #EAEAEA;
+	box-shadow: 0px 5px 0px gray;
+}
+
+#li10:HOVER {
+	background-color: #EAEAEA;
+	box-shadow: 0px 5px 0px gray;
+}
+
+#li11:HOVER {
+	background-color: #EAEAEA;
+	box-shadow: 0px 5px 0px gray;
+}
+
+nav {
+	width: 100px;
+	height: 500px;
+	margin: 0px;
+	padding: 10px;
+	background-color: #D9E5FF;
+	display: table-cell;
+}
+
+nav>h1 {
+	border: 2px solid black;
+	font-size: 30px;
+}
+
+#menu {
+	list-style: none;
+	font-size: 30px;
+	text-align: left;
+	margin: 0px 0px 0px -10px;
+	padding: 10px;
+}
+
+#menu>li:HOVER {
+	background-color: green;
+	transition: all 1s;
+}
+
+#li1 {
+	border-top: solid;
+}
+
+#li2, #li3, #li4 {
+	border: 2px;
+	border-style: dotted none none none;
+}
+
+#li5 {
+	border: 2px;
+	border-style: dotted none dotted none;
+}
+
+#li6 {
+	border-bottom: solid;
+}
+
+li>img {
+	width: 120px;
+	height: 110px;
+}
+
+section#content {
+	width: 874px;
+	height: 500px;
+	margin: 0px;
+	padding: 10px;
+	background-color: #DAD9FF;
+	display: table-cell;
+}
+
+#p1 {
+	line-height: 200%;
+}
+
+#p2 {
+	line-height: 150%;
+}
+
+footer {
+	width: 1024px;
+	height: 30px;
+	margin: 0px;
+	padding: 10px;
+	background-color: #E8D9FF;
+	text-align: center;
+}
+</style>
+
+
+
 </head>
-<table width="1024" height="768" border="1" align="center"
-	cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
-	<!--DWLayoutTable-->
-	<tr>
-		<td width="1020" height="84" align="center" valign="middle"
-			bgcolor="#FFFFFF"><table width="1010" height="78" border="0"
-				align="center">
-				<!--DWLayoutTable-->
-				<tr>
-					<td width="766" rowspan="2" align="center" valign="middle"><h1>
-							English Mock Test</h1></td>
-					<!-------------------------------- 로그인 여부-------------------->
+
+
+<body>
+	<header>
+		<h1>독서실 관리 프로그램</h1>
+
+	</header>
+
+	<nav>
+		<h1>LINKS</h1>
+		<ul id="menu">
+			<li id="li1">좌석관리</li>
+			<li id="li2">회원관리</li>
+			<li id="li3">결재관리</li>
+			<li id="li4">출석관리</li>
+			<li id="li5">일정관리</li>
+		</ul>
+		<div>
+			<ul id="list1">
+				<li id="li7">좌석관리</li>
+				<li id="li8">회원관리</li>
+				<li id="li9">결재관리</li>
+				<li id="li10">출석관리</li>
+				<li id="li11">일정관리</li>
+			</ul>
+
+
+		</div>
+
+	</nav>
+
+	<section id="content">
+
+
+							<!-------------------------------- 로그인 여부-------------------->
 					<c:choose>
 						<c:when test="${sessionScope.sid==null }">
 							<td width="234" height="82" align="right" valign="middle"><a
@@ -36,46 +209,14 @@
 
 
 					<!------------------------------- 로그인 여부 --------------------->
-				</tr>
-				<tr>
-					<td height="4"></td>
-				</tr>
-			</table></td>
-	</tr>
-	<tr>
-		<td height="59" valign="top" class="navbar"><table width="704"
-				height="57" border="0">
-				<tr align="center" valign="middle">
-					<td width="169"><a href="#">EMT 소개 </a></td>
-					<td width="169"><a href="#">토익스피킹</a></td>
-					<td width="169"><a href="#">유형별문제</a></td>
-					<td width="169"><a href="#">게시판</a></td>
-				</tr>
-			</table></td>
-	</tr>
-	<tr>
-		<td height="563" align="center" valign="middle" bgcolor="#FFFFFF"><table
-				width="892" height="489" border="1">
-				<tr align="center" valign="middle">
-					<td width="441"><img src="#" width="430" height="300" /></td>
-					<td>
-						<div id="Layer1"
-							style="border: 1px solid black; left: 580px; top: 236px; width: 375px; height: 204px; z-index: 1">
-							<p>게시판 목록</p>
-							<p>글은 5개</p>
-							<p>공지여부 아이디 제목</p>
-						</div> <br>
-						<div id="Layer2"
-							style="left: 584px; top: 468px; width: 372px; height: 221px; border: 1px solid black;">
-							<p>게시판 목록</p>
-							<p>글은 5개</p>
-							<p>공지여부 아이디 제목</p>
-						</div>
-					</td>
-				</tr>
-			</table></td>
-	</tr>
-	<tr>
-		<td height="26" valign="top"></td>
-	</tr>
-</table>
+
+
+	</section>
+
+
+	<footer>
+		<p>Copyright&copy; 2016. 1.29</p>
+
+	</footer>
+
+</body>
