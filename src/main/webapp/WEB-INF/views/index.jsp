@@ -9,17 +9,25 @@
 <style>
 header {
 	width: 1024px;
-	height: 100px;
+	height: 30px;
 	margin: 0px 0px 70px 0px;
 	padding: 10px;
 	background-color: #D5D5D5;
 }
 
 header>h1 {
-	text-align: center;
+	text-align: left;
 	text-shadow: 5px 5px 5px gray;
-	font-size: 40px;
+	font-size: 15px;
 	letter-spacing: 3px;
+}
+
+header>h1>strong {
+	position: absolute;
+	font-size: 15px;
+	text-shadow: 0px 0px 0px gray;
+	letter-spacing:0px;
+	left: 700px;
 }
 
 div {
@@ -27,9 +35,10 @@ div {
 	height: 50px;
 	margin: 0px 0px 0px -10px;
 	padding: 10px;
-	border: thin solid black;
+	/* 	border: thin solid black; */
 	position: absolute;
-	top: 130px;
+	top: 58px;
+	background-color: #D5D5D5;
 }
 
 ul#list1 {
@@ -91,14 +100,14 @@ nav>h1 {
 
 #menu {
 	list-style: none;
-	font-size: 30px;
+	font-size: 20px;
 	text-align: left;
 	margin: 0px 0px 0px -10px;
 	padding: 10px;
 }
 
 #menu>li:HOVER {
-	background-color: green;
+	background-color: #E8D9FF;
 	transition: all 1s;
 }
 
@@ -126,7 +135,7 @@ li>img {
 }
 
 section#content {
-	width: 874px;
+	width: 904px;
 	height: 500px;
 	margin: 0px;
 	padding: 10px;
@@ -159,7 +168,21 @@ footer {
 
 <body>
 	<header>
-		<h1>독서실 관리 프로그램</h1>
+		<h1>
+			독서실 관리 프로그램  <c:choose>
+					<c:when test="${sessionScope.sid==null }">
+						<strong><a href="login"><input type="button" name="button" value="로그인"></a>
+						<a href="join/join"><input type="button" name="button" value="회원가입"></a></strong>
+					</c:when>
+					<c:otherwise>
+						<strong>${sid }님환영합니다.<input name="button" type="button"
+							onClick-"location.href='index.html' " value="로그아웃"></strong>
+
+					</c:otherwise>
+				</c:choose>
+		</h1>
+
+
 
 	</header>
 
@@ -187,35 +210,14 @@ footer {
 	</nav>
 
 	<section id="content">
-
-
-							<!-------------------------------- 로그인 여부-------------------->
-					<c:choose>
-						<c:when test="${sessionScope.sid==null }">
-							<td width="234" height="82" align="right" valign="middle"><a
-								href="login"><input type="button" name="button" value="로그인"></a>
-								<a href="join/join"><input type="button" name="button"
-									value="회원가입"></a></td>
-						</c:when>
-						<c:otherwise>
-							<td width="234" height="82" align="center" valign="bottom">
-								<h4>${sid }님환영합니다.</h4> <input type="button" name="button"
-								value="본인정보 관리"> <input type="button" name="button"
-								value="복습"> <input name="button" type="button"
-								onClick-"location.href='index.html' " value="로그아웃">
-							</td>
-						</c:otherwise>
-					</c:choose>
-
-
-					<!------------------------------- 로그인 여부 --------------------->
-
-
+		<p>좌석이용현황
+		<p>
+			<img alt="좌석배치도" src="<c:url value="/img/seat.jpg"/>">
 	</section>
 
 
 	<footer>
-		<p>Copyright&copy; 2016. 1.29</p>
+		<p>Copyright&copy; 2016. 12.19</p>
 
 	</footer>
 
