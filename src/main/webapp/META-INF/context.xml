@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
     <WatchedResource>WEB-INF/web.xml</WatchedResource>    
-	<Resource name="jdbc/spring"  
+	<Resource name="jdbc/lms"  
 		   auth="Container"             
 		   type="javax.sql.DataSource"  
 		   username="lms"              
 		   password="lms"              
 		   driverClassName="oracle.jdbc.driver.OracleDriver"
 		   factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
-		   url="jdbc:oracle:thin:@127.0.0.1:1521:xe" 
+		   url="jdbc:oracle:thin:@localhost:1521:xe" 
 		   maxActive="2" 
 		   minIdle="2"/>	   
 		   

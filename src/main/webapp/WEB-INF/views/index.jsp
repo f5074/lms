@@ -20,7 +20,7 @@
 		<h1>
 			독서실 관리 프로그램  <c:choose>
 					<c:when test="${sessionScope.sid==null }">
-						<strong><a href="login"><input type="button" name="button" value="로그인"></a>
+						<strong><a href="attendance"><input type="button" name="button" value="로그인"></a>
 						<a href="join/join"><input type="button" name="button" value="회원가입"></a></strong>
 					</c:when>
 					<c:otherwise>

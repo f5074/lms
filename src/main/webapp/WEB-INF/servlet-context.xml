@@ -26,23 +26,24 @@
 
 	<!-- 02. mybatis ( DB 관련 ) 추가 시작-->
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:comp/env/jdbc/spring" />
+		<property name="jndiName" value="java:comp/env/jdbc/lms" />
 		<property name="resourceRef" value="true" />
 	</bean>
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="classpath*:com/lms/dao/mapper/**/*.xml" />
+		<property name="mapperLocations" value="classpath*:com/lms/dao/mapper/*.xml" />
 	</bean>
 	<mybatis:scan base-package="com.lms.join.dao.mapper" />
 	<mybatis:scan base-package="com.lms.login.dao.mapper" />
+	<mybatis:scan base-package="com.lms.attendance.dao.mapper" />
 	<!-- 02. mybatis ( DB 관련 ) 추가 끝 -->
 
 
 	<!-- 03. File Upload 추가 시작 -->
-	<bean id="multipartResolver"
+<!-- 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 	<context:property-placeholder location="classpath:com/lms/prop.properties" />
-	<mvc:resources mapping="/upload/**" location="/upload/" />
+	<mvc:resources mapping="/upload/**" location="/upload/" /> -->
 	<!-- 03. File Upload 추가 끝 -->
 
 
