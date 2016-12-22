@@ -12,6 +12,6 @@
 	</select>
 	
 	<insert id="joinUser" parameterType="com.lms.domain.User">
-		INSERT INTO users values (#{userId},#{userPw},#{email},sysdate,null,null)
+		INSERT INTO users VALUES (#{userId},#{userPw},#{email},sysdate)
 	</insert>
 </mapper>

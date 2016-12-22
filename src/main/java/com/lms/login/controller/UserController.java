@@ -34,7 +34,7 @@ public class UserController {
 	public String getUser(User user, HttpSession session, Model model){
 		user = userService.loginCheck(user);
 		if(user == null){
-			model.addAttribute("msg", "일칳하는 회원정보 없음");
+			model.addAttribute("msg", "일치하는 회원정보 없음");
 			return "/login";
 		} else if(user.getUserId().equals("admin")){
 			session.setAttribute("sid", user.getUserId());

@@ -105,7 +105,7 @@ $(function() {
 											success : function(result) {
 												if (result == 1) {
 													alert("회원가입 되었습니다.");
-													document.location.href = "/emt/index";
+													document.location.href = "/lms/index";
 												} else {
 													alert("회원가입 되지 않았습니다.");
 												}
