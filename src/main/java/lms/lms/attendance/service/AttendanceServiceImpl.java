@@ -4,6 +4,7 @@ import java.util.List;
 
 import lms.lms.attendance.dao.AttendanceDao;
 import lms.lms.common.domain.Attendance;
+import lms.lms.common.domain.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,9 +14,9 @@ public class AttendanceServiceImpl implements AttendanceService{
 	@Autowired private AttendanceDao attendanceDao;
 	
 	@Override
-	public int attendanceInsert(Attendance attendance) {
+	public int attendanceInsert(String userId) {
 		// TODO Auto-generated method stub
-		return attendanceDao.attendanceInsert(attendance);
+		return attendanceDao.attendanceInsert(userId);
 	}
 
 	@Override

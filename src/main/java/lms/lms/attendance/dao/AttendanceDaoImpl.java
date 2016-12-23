@@ -13,9 +13,9 @@ public class AttendanceDaoImpl implements AttendanceDao{
 	@Autowired private AttendanceMapper attendanceMapper;
 	
 	@Override
-	public int attendanceInsert(Attendance attendance) {
+	public int attendanceInsert(String userId) {
 		// TODO Auto-generated method stub
-		return attendanceMapper.attendanceInsert(attendance);
+		return attendanceMapper.attendanceInsert(userId);
 	}
 
 	@Override

@@ -2,6 +2,8 @@ package lms.lms.login.controller;
 
 import javax.servlet.http.HttpSession;
 
+import lms.lms.attendance.service.AttendanceService;
+import lms.lms.common.domain.Attendance;
 import lms.lms.common.domain.User;
 import lms.lms.login.service.UserService;
 
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class UserController {
 	@Autowired private UserService userService;
+	@Autowired private AttendanceService attendanceService;
 	
 	@RequestMapping("/")
 	public String home(){
@@ -41,6 +44,8 @@ public class UserController {
 			return "/login";
 		} else {
 			session.setAttribute("sid", user.getUserId());
+			String userId= user.getUserId();
+			attendanceService.attendanceInsert(userId);
 			return "/login";
 		}
 	}
