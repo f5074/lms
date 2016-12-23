@@ -11,7 +11,7 @@
 		http://mybatis.org/schema/mybatis-spring
 		http://mybatis.org/schema/mybatis-spring.xsd">
 
-	<context:component-scan base-package="com.lms" />
+	<context:component-scan base-package="lms.lms" />
 	<mvc:annotation-driven />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -31,11 +31,11 @@
 	</bean>
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="classpath*:com/lms/dao/mapper/*.xml" />
+		<property name="mapperLocations" value="classpath*:com/lms/*/dao/mapper/*.xml" />
 	</bean>
-	<mybatis:scan base-package="com.lms.join.dao.mapper" />
-	<mybatis:scan base-package="com.lms.login.dao.mapper" />
-	<mybatis:scan base-package="com.lms.attendance.dao.mapper" />
+	<mybatis:scan base-package="lms.lms.join.dao.mapper" />
+	<mybatis:scan base-package="lms.lms.login.dao.mapper" />
+	<mybatis:scan base-package="lms.lms.attendance.dao.mapper" />
 	<!-- 02. mybatis ( DB 관련 ) 추가 끝 -->
 
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lms.lms.join.dao.mapper.JoinMapper">
+	<resultMap id="joinMap" type="lms.lms.common.domain.User">
+		<id property="userId" column="user_id" />
+		<result property="userPw" column="user_pw" />
+		<result property="email" column="email" />
+	</resultMap>
+	
+	<select id="duplCheck" parameterType="lms.lms.common.domain.User" resultMap="joinMap">
+		select user_id userId FROM USERS WHERE user_id=#{userId}
+	</select>
+	
+	<insert id="joinUser" parameterType="lms.lms.common.domain.User">
+		INSERT INTO users VALUES (#{userId},#{userPw},#{email},sysdate)
+	</insert>
+</mapper>
