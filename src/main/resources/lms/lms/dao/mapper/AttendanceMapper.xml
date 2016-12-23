@@ -7,7 +7,7 @@
 		<result property="checkInTime" column="checkin_time"/>	
 		<result property="checkOutTime" column="checkout_time"/>
 	</resultMap>
-	<select id="attendanceList" resultMap="attendanceMap">
+	<select id="attendanceList" parameterType="lms.lms.common.domain.Attendance" resultMap="attendanceMap">
 		SELECT attendance_no attendanceNo, user_no userNo, checkin_time checkInTime, checkout_time checkOutTime
 		FROM attendance ORDER BY attendance_no
 	</select>
