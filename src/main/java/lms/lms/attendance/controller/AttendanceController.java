@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AttendanceController {
 	@Autowired private AttendanceService attendanceService;
 	
-	//결제 목록보기
-	@RequestMapping("attendance")
+	//출석 목록보기
+	@RequestMapping("/attendance")
 	public String attendance(Model model){
 		List<Attendance> attendance = attendanceService.attendanceList();
 		model.addAttribute("attendance",attendance);

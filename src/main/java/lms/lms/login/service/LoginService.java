@@ -1,7 +1,8 @@
-package lms.lms.login.dao;
+package lms.lms.login.service;
 
 import lms.lms.common.domain.User;
 
-public interface UserDao {
+public interface LoginService {
 	User loginCheck(User user);
+
 }

@@ -1,8 +1,9 @@
-package lms.lms.login.service;
+package lms.lms.login.dao.mapper;
 
 import lms.lms.common.domain.User;
 
-public interface UserService {
+public interface LoginMapper {
+
 	User loginCheck(User user);
 
 }

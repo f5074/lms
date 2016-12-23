@@ -16,7 +16,7 @@
 		<c:when test="${sessionScope.sid=='admin' }">
 			<script>
 				alert("관리자님 환영합니다.");
-				document.location.href = "admin/adminMain";
+				document.location.href = "../index";
 			</script>
 		</c:when>
 		<c:when test="${sessionScope.sid==null }">
@@ -24,7 +24,7 @@
 		<c:otherwise>
 			<script>
 				alert("${sid}" + "님환영합니다.");
-				document.location.href = "index";
+				document.location.href = "../index";
 			</script>
 		</c:otherwise>
 	</c:choose>

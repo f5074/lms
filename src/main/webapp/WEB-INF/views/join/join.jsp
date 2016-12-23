@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-<script src="<c:url value="/js/memberJoin.js"/>"></script>
+<script src="<c:url value="/js/join_script.js"/>"></script>
 <title>무제 문서</title>
 </head>
 
