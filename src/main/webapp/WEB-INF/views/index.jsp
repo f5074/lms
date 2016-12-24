@@ -28,7 +28,7 @@
 			<ul id="list1">
 				<li id="li7">좌석관리</li>
 				<li id="li8">회원관리</li>
-				<li id="li9">결재관리</li>
+				<li id="li9"><a href="payment">결젠관리</a></li>
 				<li id="li10"><a href="attendance">출석관리</a></li>
 				<li id="li11">일정관리</li>
 			</ul>
