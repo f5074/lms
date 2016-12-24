@@ -4,7 +4,6 @@ import java.util.List;
 
 import lms.lms.attendance.dao.AttendanceDao;
 import lms.lms.common.domain.Attendance;
-import lms.lms.common.domain.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

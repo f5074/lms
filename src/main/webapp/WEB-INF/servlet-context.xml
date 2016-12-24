@@ -37,6 +37,8 @@
 	<mybatis:scan base-package="lms.lms.login.dao.mapper" />
 	<mybatis:scan base-package="lms.lms.attendance.dao.mapper" />
 	<mybatis:scan base-package="lms.lms.payment.dao.mapper" />
+	<mybatis:scan base-package="lms.lms.seat.dao.mapper" />
+	<mybatis:scan base-package="lms.lms.userDetail.dao.mapper" />
 	<!-- 02. mybatis ( DB 관련 ) 추가 끝 -->
 
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lms.lms.userDetail.dao.mapper.UserDetailMapper">
+	<resultMap  id="userDetailMap" type="lms.lms.common.domain.UserDetail">
+		<result property="userNo" column="user_no"/>	
+		<result property="userId" column="user_id"/>	
+		<result property="userName" column="user_name"/>	
+		<result property="userHomeNumber" column="user_homenumber"/>	
+		<result property="userPhone" column="user_phone"/>	
+		<result property="userSchool" column="user_school"/>	
+		<result property="userGrade" column="user_grade"/>	
+		<result property="userAddress" column="user_address"/>	
+	</resultMap>
+	<select id="userDetailList" parameterType="lms.lms.common.domain.UserDetail" resultMap="userDetailMap">
+		SELECT *
+		FROM users_detail ORDER BY user_no
+	</select>	
+</mapper>
