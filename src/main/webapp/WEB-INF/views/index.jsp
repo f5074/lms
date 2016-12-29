@@ -26,11 +26,10 @@
 		</h1>
 		<div>
 			<ul id="list1">
-				<li id="li7">좌석관리</li>
-				<li id="li8">회원관리</li>
+				<li id="li7"><a href="seat">좌석관리</a></li>
+				<li id="li8"><a href="userDetail">회원관리</a></li>
 				<li id="li9"><a href="payment">결제관리</a></li>
 				<li id="li10"><a href="attendance">출석관리</a></li>
-				<li id="li11">일정관리</li>
 			</ul>
 		</div>
 	</header>

@@ -2,6 +2,8 @@ package lms.lms.attendance.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import lms.lms.attendance.service.AttendanceService;
 import lms.lms.common.domain.Attendance;
 
@@ -20,9 +22,15 @@ public class AttendanceController {
 		List<Attendance> attendance = attendanceService.attendanceList();
 		model.addAttribute("attendance",attendance);
 		return "/attendance/attendance";
-		
 	}
 	
+	//입실 시 입실 시간 추가 
+	@RequestMapping("/attendanceInsert")
+	public String attendanceInsert(HttpSession session, Model model){
+		String userId= (String) session.getAttribute("sid");
+		attendanceService.attendanceInsert(userId);	
+		return "/index";	
+	}
 	
 	
 }
