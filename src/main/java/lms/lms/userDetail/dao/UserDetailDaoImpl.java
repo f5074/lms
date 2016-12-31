@@ -41,4 +41,10 @@ public class UserDetailDaoImpl implements UserDetailDao{
 		return userDetailMapper.userDetailView(userDetail);
 	}
 
+	@Override
+	public List<UserDetail> sendSMS(int userNo, int userPhone) {
+		// TODO Auto-generated method stub
+		return userDetailMapper.sendSMS(userNo, userPhone);
+	}
+
 }

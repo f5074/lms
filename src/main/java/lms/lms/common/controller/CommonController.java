@@ -15,12 +15,4 @@ public class CommonController {
 	public String index(){
 		return "/index";
 	}
-	
-	 @RequestMapping("/android")
-	    public String android(){
-	        System.out.println("android");
-	        return "/android";
-	    }
-
-
 }

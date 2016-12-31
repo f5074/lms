@@ -12,7 +12,12 @@
 	<properties>
 		<spring.maven.artifact.version>4.0.9.RELEASE</spring.maven.artifact.version>
 		<egovframework.rte.version>3.5.0</egovframework.rte.version>
+		
+		<!-- 05. jackson-databind 추가 -->
+		<jackson.version>2.4.4</jackson.version>
 	</properties>
+	
+
 
 	<repositories>
 		<repository>
@@ -147,7 +152,14 @@
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.6.4</version>
 		</dependency>
-		<!-- 04. ajax 추가 끝 -->		
+		<!-- 04. ajax 추가 끝 -->
+		<!-- 05. jackson-databind 추가 -->		
+		<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+		
 
 	</dependencies>
 
