@@ -48,6 +48,10 @@
 			<li id="li5">링크5</li>
 		</ul>
 	</nav>
+	<script>
+	SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	
+	</script>
 
 	<section id="content">
 		<table>
@@ -57,6 +61,8 @@
 					<td>${attendance.userNo }</td>
 					<td>${attendance.checkInTime }</td>
 					<td>${attendance.checkOutTime }</td>
+					<td>${attendance.checkInSMS }</td>
+					<td>${attendance.checkOutSMS }</td>
 				</tr>
 			</c:forEach>
 		</table>

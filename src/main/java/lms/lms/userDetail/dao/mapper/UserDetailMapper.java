@@ -7,11 +7,10 @@ import org.apache.ibatis.annotations.Param;
 import lms.lms.common.domain.UserDetail;
 
 public interface UserDetailMapper {
-	int userDetailInsert(UserDetail userDetail);
-	int userDetailUpddate(UserDetail userDetail);
-	int userDetailDelete(UserDetail userDetail);
+
+	//회원관리 리스트 출력
 	List<UserDetail> userDetailList();
-	UserDetail userDetailView(UserDetail userDetail);
+
 	// 안드로이드에서 받은 전화번호로 유저정보받아오기 
 	List<UserDetail> sendSMS(@Param("userNo") int userNo, @Param("userPhone") int userPhone);
 

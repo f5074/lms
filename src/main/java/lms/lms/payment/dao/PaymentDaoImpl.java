@@ -13,33 +13,10 @@ public class PaymentDaoImpl implements PaymentDao{
 	@Autowired private PaymentMapper paymentMapper;
 
 	@Override
-	public int paymentInsert(Payment payment) {
-		// TODO Auto-generated method stub
-		return paymentMapper.paymentInsert(payment);
-	}
-
-	@Override
-	public int paymentUpdate(Payment payment) {
-		// TODO Auto-generated method stub
-		return paymentMapper.paymentUpdate(payment);
-	}
-
-	@Override
-	public int paymentDelete(Payment payment) {
-		// TODO Auto-generated method stub
-		return paymentMapper.paymentDelete(payment);
-	}
-
-	@Override
 	public List<Payment> paymentList() {
 		// TODO Auto-generated method stub
 		return paymentMapper.paymentList();
 	}
 
-	@Override
-	public Payment paymentView(Payment payment) {
-		// TODO Auto-generated method stub
-		return paymentMapper.paymentView(payment);
-	}
 
 }

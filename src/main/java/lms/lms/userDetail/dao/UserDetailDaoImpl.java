@@ -11,34 +11,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserDetailDaoImpl implements UserDetailDao{
 	@Autowired private UserDetailMapper userDetailMapper;
-	@Override
-	public int userDetailInsert(UserDetail userDetail) {
-		// TODO Auto-generated method stub
-		return userDetailMapper.userDetailInsert(userDetail);
-	}
-
-	@Override
-	public int userDetailUpddate(UserDetail userDetail) {
-		// TODO Auto-generated method stub
-		return userDetailMapper.userDetailUpddate(userDetail);
-	}
-
-	@Override
-	public int userDetailDelete(UserDetail userDetail) {
-		// TODO Auto-generated method stub
-		return userDetailMapper.userDetailDelete(userDetail);
-	}
 
 	@Override
 	public List<UserDetail> userDetailList() {
 		// TODO Auto-generated method stub
 		return userDetailMapper.userDetailList();
-	}
-
-	@Override
-	public UserDetail userDetailView(UserDetail userDetail) {
-		// TODO Auto-generated method stub
-		return userDetailMapper.userDetailView(userDetail);
 	}
 
 	@Override

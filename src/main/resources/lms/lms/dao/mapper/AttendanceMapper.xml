@@ -6,17 +6,33 @@
 		<result property="userNo" column="user_no"/>	
 		<result property="checkInTime" column="checkin_time"/>	
 		<result property="checkOutTime" column="checkout_time"/>
+		<result property="checkInSMS" column="checkin_sms"/>
+		<result property="checkOutSMS" column="checkout_sms"/>
 	</resultMap>
 	<select id="attendanceList" parameterType="lms.lms.common.domain.Attendance" resultMap="attendanceMap">
 		SELECT attendance_no attendanceNo, user_no userNo, checkin_time checkInTime, checkout_time checkOutTime
 		FROM attendance ORDER BY attendance_no
 	</select>
 	
-	<insert id="attendanceInsert" parameterType="String">
-		INSERT INTO attendance(attendance_no,user_no,checkin_time)
-		SELECT seq_attendance_no.nextval, user_no userNo, sysdate
+	<insert id="checkInTime" parameterType="int">
+		INSERT INTO attendance(attendance_no,user_no,checkin_time,checkin_sms)
+		SELECT seq_attendance_no.nextval, user_no userNo, sysdate, 0
 		FROM users_detail
-		WHERE user_id = #{userId}
+		WHERE user_no = #{userNo}
 	</insert>
+	
+	<update id="checkInSMS" parameterType="map">
+			UPDATE attendance 
+			SET checkin_sms = 1
+			WHERE user_no = #{userNo}
+	
+	</update>
+	
+	<select id="checkInSMS2" parameterType="map" resultMap="attendanceMap">
+		SELECT *
+		FROM attendance
+		WHERE user_no = #{userNo}
+	
+	</select>
 	
 </mapper>

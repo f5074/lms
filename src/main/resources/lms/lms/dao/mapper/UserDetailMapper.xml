@@ -10,6 +10,7 @@
 		<result property="userSchool" column="user_school"/>	
 		<result property="userGrade" column="user_grade"/>	
 		<result property="userAddress" column="user_address"/>	
+		<result property="userParentNumber" column="user_parentnumber"/>	
 	</resultMap>
 	<select id="userDetailList" parameterType="lms.lms.common.domain.UserDetail" resultMap="userDetailMap">
 		SELECT *

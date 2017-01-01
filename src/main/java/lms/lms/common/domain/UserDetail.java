@@ -19,6 +19,7 @@ public class UserDetail {
 	private String userSchool;
 	private int userGrade;
 	private String userAddress;
+	private String userParentNumber;
 
 	public int getUserNo() {
 		return userNo;
@@ -68,4 +69,12 @@ public class UserDetail {
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	}
+	public String getUserParentNumber() {
+		return userParentNumber;
+	}
+	public void setUserParentNumber(String userParentNumber) {
+		this.userParentNumber = userParentNumber;
+	}
+	
+	
 }

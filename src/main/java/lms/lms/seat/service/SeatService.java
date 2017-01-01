@@ -5,10 +5,8 @@ import java.util.List;
 import lms.lms.common.domain.Seat;
 
 public interface SeatService {
-	int seatInsert(Seat seat);
-	int seatUpdate(Seat seat);
-	int seatDelete(Seat seat);
+	
+	//좌석관리 리스트 출력
 	List<Seat> seatList();
-	Seat seatView(Seat seat);
-
+	
 }

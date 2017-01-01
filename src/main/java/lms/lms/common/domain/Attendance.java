@@ -8,11 +8,14 @@ public class Attendance {
 	USER_NO 		NUMBER, 회원번호 
 	CHECKIN_TIME 	DATE,  	입실시간 
 	CHECKOUT_TIME 	DATE, 	퇴실시간 
+	
 */
 	private int attendanceNo;
 	private int userNo;
 	private Date checkInTime;
 	private Date checkOutTime;
+	private String checkInSMS;
+	private String checkOutSMS;
 	
 	public int getAttendanceNo() {
 		return attendanceNo;
@@ -38,4 +41,18 @@ public class Attendance {
 	public void setCheckOutTime(Date checkOutTime) {
 		this.checkOutTime = checkOutTime;
 	}
+	public String getCheckInSMS() {
+		return checkInSMS;
+	}
+	public void setCheckInSMS(String checkInSMS) {
+		this.checkInSMS = checkInSMS;
+	}
+	public String getCheckOutSMS() {
+		return checkOutSMS;
+	}
+	public void setCheckOutSMS(String checkOutSMS) {
+		this.checkOutSMS = checkOutSMS;
+	}
+	
+	
 }

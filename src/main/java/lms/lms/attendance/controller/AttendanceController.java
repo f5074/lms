@@ -27,8 +27,8 @@ public class AttendanceController {
 	//입실 시 입실 시간 추가 
 	@RequestMapping("/attendanceInsert")
 	public String attendanceInsert(HttpSession session, Model model){
-		String userId= (String) session.getAttribute("sid");
-		attendanceService.attendanceInsert(userId);	
+		int userNo= Integer.parseInt((String)session.getAttribute("userNo"));
+		attendanceService.checkInTime(userNo);	
 		return "/index";	
 	}
 	

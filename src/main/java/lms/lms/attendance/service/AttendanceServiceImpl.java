@@ -13,21 +13,9 @@ public class AttendanceServiceImpl implements AttendanceService{
 	@Autowired private AttendanceDao attendanceDao;
 	
 	@Override
-	public int attendanceInsert(String userId) {
+	public int checkInTime(int userNo) {
 		// TODO Auto-generated method stub
-		return attendanceDao.attendanceInsert(userId);
-	}
-
-	@Override
-	public int attendanceUpdate(Attendance attendance) {
-		// TODO Auto-generated method stub
-		return attendanceDao.attendanceUpdate(attendance);
-	}
-
-	@Override
-	public int attendanceDelete(Attendance attendance) {
-		// TODO Auto-generated method stub
-		return attendanceDao.attendanceDelete(attendance);
+		return attendanceDao.checkInTime(userNo);
 	}
 
 	@Override
@@ -37,9 +25,15 @@ public class AttendanceServiceImpl implements AttendanceService{
 	}
 
 	@Override
-	public Attendance attendanceView(Attendance attendance) {
+	public int checkInSMS(int userNo) {
 		// TODO Auto-generated method stub
-		return attendanceDao.attendanceView(attendance);
+		return attendanceDao.checkInSMS(userNo);
+	}
+
+	@Override
+	public List<Attendance> checkInSMS2(int userNo) {
+		// TODO Auto-generated method stub
+		return attendanceDao.checkInSMS2(userNo);
 	}
 
 }
