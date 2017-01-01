@@ -36,4 +36,22 @@ public class AttendanceServiceImpl implements AttendanceService{
 		return attendanceDao.checkInSMS2(userNo);
 	}
 
+	@Override
+	public int checkOutTime(int userNo) {
+		// TODO Auto-generated method stub
+		return attendanceDao.checkOutTime(userNo);
+	}
+
+	@Override
+	public int checkOutSMS(int userNo) {
+		// TODO Auto-generated method stub
+		return attendanceDao.checkOutSMS(userNo);
+	}
+
+	@Override
+	public List<Attendance> checkOutSMS2(int userNo) {
+		// TODO Auto-generated method stub
+		return attendanceDao.checkOutSMS2(userNo);
+	}
+
 }

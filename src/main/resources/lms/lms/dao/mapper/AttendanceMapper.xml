@@ -35,4 +35,25 @@
 	
 	</select>
 	
+		<insert id="checkOutTime" parameterType="int">
+		INSERT INTO attendance(attendance_no,user_no,checkout_time,checkout_sms)
+		SELECT seq_attendance_no.nextval, user_no userNo, sysdate, 0
+		FROM users_detail
+		WHERE user_no = #{userNo}
+	</insert>
+	
+	<update id="checkOutSMS" parameterType="map">
+			UPDATE attendance 
+			SET checkout_sms = 1
+			WHERE user_no = #{userNo}
+	
+	</update>
+	
+	<select id="checkOutSMS2" parameterType="map" resultMap="attendanceMap">
+		SELECT *
+		FROM attendance
+		WHERE user_no = #{userNo}
+	
+	</select>
+	
 </mapper>

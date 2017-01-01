@@ -12,12 +12,18 @@ public interface AttendanceMapper {
 	List<Attendance> attendanceList();
 	
 	//입실 시 시간 추가
-	int checkInTime(int userNo);
-	
+	int checkInTime(int userNo);	
 	//입실시 유저의 체크인sms 1로 변경
-	int checkInSMS(int userNo);
-	
+	int checkInSMS(int userNo);	
 	//체크인 후 입실한 유저의 데이터 보내기
 	List<Attendance> checkInSMS2(@Param("userNo")int userNo);
+	
+	
+	//퇴실 시 시간 추가
+	int checkOutTime(int userNo);
+	//퇴실시 유저의 체크아웃sms 1로 변경
+	int checkOutSMS(int userNo);	
+	//체크아웃 후 퇴실한 유저의 데이터 보내기
+	List<Attendance> checkOutSMS2(@Param("userNo")int userNo);
 
 }

@@ -64,18 +64,51 @@ public class AndroidController {
 /*		attendanceService.checkInSMS(userNo);*/
 		
 		//입실한 정보 가져오기
-		List<Attendance> checkINSMS2 = attendanceService.checkInSMS2(userNo);
+		List<Attendance> checkInSMS2 = attendanceService.checkInSMS2(userNo);
 		
 		
 		
 		Map<String, String> result = new HashMap<String, String>();
 		
-		   for (int i = 0; i<checkINSMS2.size(); i++) {
-	            System.out.println(i + " : " + checkINSMS2.get(i).getUserNo());
+		   for (int i = 0; i<checkInSMS2.size(); i++) {
+	            System.out.println(i + " : " + checkInSMS2.get(i).getUserNo());
 	        }
 		
-		result.put("data1", String.valueOf(checkINSMS2.get(0).getUserNo()));
-		result.put("data2", checkINSMS2.get(0).getCheckInSMS());	
+		result.put("data1", String.valueOf(checkInSMS2.get(0).getUserNo()));
+		result.put("data2", checkInSMS2.get(0).getCheckInSMS());	
+		
+		return result;
+	}
+	
+	//안드로이드로 퇴실데이터 받고 퇴실 시키기
+	@RequestMapping("/android5")
+	@ResponseBody
+	public Map<String, String> androidTestWithRequestAndResponse3(HttpServletRequest request) {
+		System.out.println(request.getParameter("userNo"));
+		System.out.println(request.getParameter("userPhone"));
+
+		int userNo = Integer.parseInt(request.getParameter("userNo"));
+		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
+		
+		//퇴실 입력 후 퇴실시간 입력
+		attendanceService.checkOutTime(userNo);
+		
+		//퇴실문자체크가 0일때 1로 변경
+/*		attendanceService.checkOutSMS(userNo);*/
+		
+		//퇴실한 정보 가져오기
+		List<Attendance> checkOutSMS2 = attendanceService.checkOutSMS2(userNo);
+		
+		
+		
+		Map<String, String> result = new HashMap<String, String>();
+		
+		   for (int i = 0; i<checkOutSMS2.size(); i++) {
+	            System.out.println(i + " : " + checkOutSMS2.get(i).getUserNo());
+	        }
+		
+		result.put("data1", String.valueOf(checkOutSMS2.get(0).getUserNo()));
+		result.put("data2", checkOutSMS2.get(0).getCheckInSMS());	
 		
 		return result;
 	}

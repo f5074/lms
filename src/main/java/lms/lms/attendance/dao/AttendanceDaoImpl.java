@@ -36,4 +36,22 @@ public class AttendanceDaoImpl implements AttendanceDao{
 		return attendanceMapper.checkInSMS2(userNo);
 	}
 
+	@Override
+	public int checkOutTime(int userNo) {
+		// TODO Auto-generated method stub
+		return attendanceMapper.checkOutTime(userNo);
+	}
+
+	@Override
+	public int checkOutSMS(int userNo) {
+		// TODO Auto-generated method stub
+		return attendanceMapper.checkOutSMS(userNo);
+	}
+
+	@Override
+	public List<Attendance> checkOutSMS2(int userNo) {
+		// TODO Auto-generated method stub
+		return attendanceMapper.checkOutSMS2(userNo);
+	}
+
 }
