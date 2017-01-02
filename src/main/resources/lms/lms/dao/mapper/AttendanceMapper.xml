@@ -10,7 +10,7 @@
 		<result property="checkOutSMS" column="checkout_sms"/>
 	</resultMap>
 	<select id="attendanceList" parameterType="lms.lms.common.domain.Attendance" resultMap="attendanceMap">
-		SELECT attendance_no attendanceNo, user_no userNo, checkin_time checkInTime, checkout_time checkOutTime
+		SELECT attendance_no attendanceNo, user_no userNo, checkin_time checkInTime, checkout_time checkOutTime, checkin_sms checkInSMS, checkout_sms checkOutSMS 
 		FROM attendance ORDER BY attendance_no
 	</select>
 	
@@ -31,11 +31,10 @@
 	<select id="checkInSMS2" parameterType="map" resultMap="attendanceMap">
 		SELECT *
 		FROM attendance
-		WHERE user_no = #{userNo}
-	
+		WHERE checkin_sms = 0
 	</select>
 	
-		<insert id="checkOutTime" parameterType="int">
+	<insert id="checkOutTime" parameterType="int">
 		INSERT INTO attendance(attendance_no,user_no,checkout_time,checkout_sms)
 		SELECT seq_attendance_no.nextval, user_no userNo, sysdate, 0
 		FROM users_detail

@@ -1,5 +1,6 @@
 package lms.lms.attendance.service;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
@@ -17,6 +18,7 @@ public interface AttendanceService {
 	int checkInSMS(int userNo);	
 	//체크인 후 입실한 유저의 데이터 보내기
 	List<Attendance> checkInSMS2(@Param("userNo")int userNo);
+
 	
 	
 	//퇴실 시 시간 추가

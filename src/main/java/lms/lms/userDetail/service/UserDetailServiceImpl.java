@@ -24,4 +24,10 @@ public class UserDetailServiceImpl implements UserDetailService{
 		return userDetailDao.sendSMS(userNo, userPhone);
 	}
 
+	@Override
+	public List<UserDetail> userDetailView(int userNo, int userPhone) {
+		// TODO Auto-generated method stub
+		return userDetailDao.userDetailView(userNo, userPhone);
+	}
+
 }

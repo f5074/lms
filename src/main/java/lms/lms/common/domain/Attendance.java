@@ -12,8 +12,8 @@ public class Attendance {
 */
 	private int attendanceNo;
 	private int userNo;
-	private Date checkInTime;
-	private Date checkOutTime;
+	private String checkInTime;
+	private String checkOutTime;
 	private String checkInSMS;
 	private String checkOutSMS;
 	
@@ -29,16 +29,16 @@ public class Attendance {
 	public void setUserNo(int userNo) {
 		this.userNo = userNo;
 	}
-	public Date getCheckInTime() {
+	public String getCheckInTime() {
 		return checkInTime;
 	}
-	public void setCheckInTime(Date checkInTime) {
+	public void setCheckInTime(String checkInTime) {
 		this.checkInTime = checkInTime;
 	}
-	public Date getCheckOutTime() {
+	public String getCheckOutTime() {
 		return checkOutTime;
 	}
-	public void setCheckOutTime(Date checkOutTime) {
+	public void setCheckOutTime(String checkOutTime) {
 		this.checkOutTime = checkOutTime;
 	}
 	public String getCheckInSMS() {

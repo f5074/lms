@@ -19,7 +19,7 @@ public class UserDetail {
 	private String userSchool;
 	private int userGrade;
 	private String userAddress;
-	private String userParentNumber;
+	private String userParentPhone;
 
 	public int getUserNo() {
 		return userNo;
@@ -69,11 +69,11 @@ public class UserDetail {
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	}
-	public String getUserParentNumber() {
-		return userParentNumber;
+	public String getUserParentPhone() {
+		return userParentPhone;
 	}
-	public void setUserParentNumber(String userParentNumber) {
-		this.userParentNumber = userParentNumber;
+	public void setUserParentPhone(String userParentPhone) {
+		this.userParentPhone = userParentPhone;
 	}
 	
 	

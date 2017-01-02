@@ -1,5 +1,6 @@
 package lms.lms.attendance.dao;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import lms.lms.attendance.dao.mapper.AttendanceMapper;
@@ -53,5 +54,9 @@ public class AttendanceDaoImpl implements AttendanceDao{
 		// TODO Auto-generated method stub
 		return attendanceMapper.checkOutSMS2(userNo);
 	}
+
+
+
+
 
 }

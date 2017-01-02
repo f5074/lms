@@ -13,5 +13,8 @@ public interface UserDetailDao {
 
 	// 안드로이드에서 받은 전화번호로 유저정보받아오기 
 	List<UserDetail> sendSMS(@Param("userNo") int userNo, @Param("userPhone") int userPhone);
+	
+	//회원넘버로 회원정보 받기
+	List<UserDetail> userDetailView(@Param("userNo") int userNo, @Param("userPhone") int userPhone);
 
 }
