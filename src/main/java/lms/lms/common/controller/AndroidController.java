@@ -121,36 +121,40 @@ public class AndroidController {
 	// 안드로이드로 입실 기록에서 문자를 확인하고 문자 보내기
 	@RequestMapping("/android6")
 	@ResponseBody
-	public Map<String, String> androidTestWithRequestAndResponse4(
+	public Map<String, String> androidTestWithRequestAndResponse4 (
 			HttpServletRequest request) {
 
-		// 쓰레드가 계속 돌고 있는지 확인용 데이터출력
+/*		// 쓰레드가 계속 돌고 있는지 확인용 데이터출력
 		System.out.println(request.getParameter("userNo"));
-		System.out.println(request.getParameter("userPhone"));
+		System.out.println(request.getParameter("userPhone"));*/
 
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
 		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
-
+		String date;
 		// 입실한 정보 가져오기
 		List<Attendance> checkInSMS2 = attendanceService.checkInSMS2(userNo);
 		
 		
-		userNo = Integer.parseInt(String.valueOf(checkInSMS2.get(0).getUserNo()));
-
+		// sms메시지를 가져올게 없으면 userNo의 값을 4, date의 값을 임의로 하여 스레드가 멈추는걸 방지 
+		boolean a= checkInSMS2.isEmpty();
+		
+		if(a == true){
+			userNo = 4;
+			date = "스레드 멈춤방지";
+			
+		} else{
+			userNo = Integer.parseInt(String.valueOf(checkInSMS2.get(0).getUserNo()));
+			
+			//데이트 객체에서 시간 나오게 하기
+			date = checkInSMS2.get(0).getCheckInTime();
+		}
+		
 		List<UserDetail> userDetailList = userDetailService.userDetailView(
 				userNo, userPhone);
 
 		Map<String, String> result = new HashMap<String, String>();
-
-		for (int i = 0; i < userDetailList.size(); i++) {
-			System.out.println(i + " : " + userDetailList.get(i).getUserNo());
-		}
-
 	
-		//데이트 객체에서 시간 나오게 하기
-		String date = checkInSMS2.get(0).getCheckInTime();
 		
-
 		result.put("data1", String.valueOf(userDetailList.get(0).getUserParentPhone()));
 
 		result.put("data2", "참 좋은 독서실: " + userDetailList.get(0).getUserName()
@@ -162,4 +166,53 @@ public class AndroidController {
 		return result;
 	}
 
+	// 안드로이드로 퇴실 기록에서 문자를 확인하고 문자 보내기
+	@RequestMapping("/android7")
+	@ResponseBody
+	public Map<String, String> androidTestWithRequestAndResponse5 (
+			HttpServletRequest request) {
+
+/*		// 쓰레드가 계속 돌고 있는지 확인용 데이터출력
+		System.out.println(request.getParameter("userNo"));
+		System.out.println(request.getParameter("userPhone"));*/
+
+		int userNo = Integer.parseInt(request.getParameter("userNo"));
+		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
+		String date;
+		// 입실한 정보 가져오기
+		List<Attendance> checkOutSMS2 = attendanceService.checkOutSMS2(userNo);
+		
+		
+		// sms메시지를 가져올게 없으면 userNo의 값을 4, date의 값을 임의로 하여 스레드가 멈추는걸 방지 
+		boolean a= checkOutSMS2.isEmpty();
+		
+		if(a == true){
+			userNo = 4;
+			date = "스레드 멈춤방지";
+			
+		} else{
+			userNo = Integer.parseInt(String.valueOf(checkOutSMS2.get(0).getUserNo()));
+			
+			//데이트 객체에서 시간 나오게 하기
+			date = checkOutSMS2.get(0).getCheckOutTime();
+		}
+		
+		List<UserDetail> userDetailList = userDetailService.userDetailView(
+				userNo, userPhone);
+
+		Map<String, String> result = new HashMap<String, String>();
+	
+		
+		result.put("data1", String.valueOf(userDetailList.get(0).getUserParentPhone()));
+
+		result.put("data2", "참 좋은 독서실: " + userDetailList.get(0).getUserName()
+				+ "(이)가 " + date + "에 퇴실하였습니다.");
+
+		// 입실문자체크가 0일때 1로 변경
+		attendanceService.checkOutSMS(userNo);
+
+		return result;
+	}
+	
+	
 }
