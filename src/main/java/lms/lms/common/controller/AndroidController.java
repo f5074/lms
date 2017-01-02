@@ -1,8 +1,5 @@
 package lms.lms.common.controller;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,8 +28,6 @@ public class AndroidController {
 	@ResponseBody
 	public Map<String, String> androidTestWithRequestAndResponse(
 			HttpServletRequest request) {
-		System.out.println(request.getParameter("userNo"));
-		System.out.println(request.getParameter("userPhone"));
 
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
 		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
@@ -49,7 +44,7 @@ public class AndroidController {
 		result.put("data1", String.valueOf(userDetail.get(0).getUserNo()));
 		result.put("data2", userDetail.get(0).getUserName());
 		result.put("data3", userDetail.get(0).getUserPhone());
-		/* result.put("data4", userDetail.get(0).getUserParentNumber()); */
+		/* result.put("data4", userDetail.get(0).getUserParentPhone()); */
 
 		return result;
 	}
@@ -59,17 +54,12 @@ public class AndroidController {
 	@ResponseBody
 	public Map<String, String> androidTestWithRequestAndResponse2(
 			HttpServletRequest request) {
-		System.out.println(request.getParameter("userNo"));
-		System.out.println(request.getParameter("userPhone"));
 
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
-		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
+		/* int userPhone = Integer.parseInt(request.getParameter("userPhone")); */
 
 		// 입실 입력 후 입실시간 입력
 		attendanceService.checkInTime(userNo);
-
-		// 입실문자체크가 0일때 1로 변경
-		/* attendanceService.checkInSMS(userNo); */
 
 		// 입실한 정보 가져오기
 		List<Attendance> checkInSMS2 = attendanceService.checkInSMS2(userNo);
@@ -91,17 +81,12 @@ public class AndroidController {
 	@ResponseBody
 	public Map<String, String> androidTestWithRequestAndResponse3(
 			HttpServletRequest request) {
-		System.out.println(request.getParameter("userNo"));
-		System.out.println(request.getParameter("userPhone"));
 
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
-		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
+		/* int userPhone = Integer.parseInt(request.getParameter("userPhone")); */
 
 		// 퇴실 입력 후 퇴실시간 입력
 		attendanceService.checkOutTime(userNo);
-
-		// 퇴실문자체크가 0일때 1로 변경
-		/* attendanceService.checkOutSMS(userNo); */
 
 		// 퇴실한 정보 가져오기
 		List<Attendance> checkOutSMS2 = attendanceService.checkOutSMS2(userNo);
@@ -113,7 +98,7 @@ public class AndroidController {
 		}
 
 		result.put("data1", String.valueOf(checkOutSMS2.get(0).getUserNo()));
-		result.put("data2", checkOutSMS2.get(0).getCheckInSMS());
+		result.put("data2", checkOutSMS2.get(0).getCheckOutSMS());
 
 		return result;
 	}
@@ -121,98 +106,76 @@ public class AndroidController {
 	// 안드로이드로 입실 기록에서 문자를 확인하고 문자 보내기
 	@RequestMapping("/android6")
 	@ResponseBody
-	public Map<String, String> androidTestWithRequestAndResponse4 (
+	public Map<String, String> androidTestWithRequestAndResponse4(
 			HttpServletRequest request) {
-
-/*		// 쓰레드가 계속 돌고 있는지 확인용 데이터출력
-		System.out.println(request.getParameter("userNo"));
-		System.out.println(request.getParameter("userPhone"));*/
 
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
 		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
-		String date;
+		String CheckInTime, CheckOutTime;
+
+
 		// 입실한 정보 가져오기
 		List<Attendance> checkInSMS2 = attendanceService.checkInSMS2(userNo);
-		
-		
-		// sms메시지를 가져올게 없으면 userNo의 값을 4, date의 값을 임의로 하여 스레드가 멈추는걸 방지 
-		boolean a= checkInSMS2.isEmpty();
-		
-		if(a == true){
-			userNo = 4;
-			date = "스레드 멈춤방지";
-			
-		} else{
-			userNo = Integer.parseInt(String.valueOf(checkInSMS2.get(0).getUserNo()));
-			
-			//데이트 객체에서 시간 나오게 하기
-			date = checkInSMS2.get(0).getCheckInTime();
-		}
-		
-		List<UserDetail> userDetailList = userDetailService.userDetailView(
-				userNo, userPhone);
-
 		Map<String, String> result = new HashMap<String, String>();
-	
+		boolean a = checkInSMS2.isEmpty();
 		
-		result.put("data1", String.valueOf(userDetailList.get(0).getUserParentPhone()));
 
-		result.put("data2", "참 좋은 독서실: " + userDetailList.get(0).getUserName()
-				+ "(이)가 " + date + "에 입실하였습니다.");
+		if (a == false) {
 
-		// 입실문자체크가 0일때 1로 변경
-		attendanceService.checkInSMS(userNo);
+			userNo = Integer.parseInt(String.valueOf(checkInSMS2.get(0)
+					.getUserNo()));
+			CheckInTime = checkInSMS2.get(0).getCheckInTime();
+
+			List<UserDetail> userDetailList = userDetailService.userDetailView(
+					userNo, userPhone);
+
+			
+			result.put("data1",
+					String.valueOf(userDetailList.get(0).getUserParentPhone()));
+
+			result.put("data2", "참 좋은 독서실: "
+					+ userDetailList.get(0).getUserName() + "(이)가 "
+					+ CheckInTime + "에 입실하였습니다.");
+
+			// 입실문자체크가 0일때 1로 변경
+			attendanceService.checkInSMS(userNo);
+
+		} else {
+
+			// 퇴실한 정보 가져오기
+			List<Attendance> checkOutSMS2 = attendanceService.checkOutSMS2(userNo);
+			
+			boolean b = checkOutSMS2.isEmpty();
+
+			
+			if(b==true){
+				
+				userNo = 4;
+				CheckOutTime = "스레드멈춤방지";
+				
+			} else{
+				userNo = Integer.parseInt(String.valueOf(checkOutSMS2.get(0)
+						.getUserNo()));
+
+				// 데이트 객체에서 시간 나오게 하기
+				CheckOutTime = checkOutSMS2.get(0).getCheckOutTime();
+			}
+				List<UserDetail> userDetailList = userDetailService.userDetailView(
+						userNo, userPhone);
+			
+				result.put("data1",
+						String.valueOf(userDetailList.get(0).getUserParentPhone()));
+
+				result.put("data2", "참 좋은 독서실: "
+						+ userDetailList.get(0).getUserName() + "(이)가 "
+						+ CheckOutTime + "에 퇴실하였습니다.");
+
+				// 퇴실문자체크가 0일때 1로 변경
+				attendanceService.checkOutSMS(userNo);				
+
+		}
 
 		return result;
 	}
 
-	// 안드로이드로 퇴실 기록에서 문자를 확인하고 문자 보내기
-	@RequestMapping("/android7")
-	@ResponseBody
-	public Map<String, String> androidTestWithRequestAndResponse5 (
-			HttpServletRequest request) {
-
-/*		// 쓰레드가 계속 돌고 있는지 확인용 데이터출력
-		System.out.println(request.getParameter("userNo"));
-		System.out.println(request.getParameter("userPhone"));*/
-
-		int userNo = Integer.parseInt(request.getParameter("userNo"));
-		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
-		String date;
-		// 입실한 정보 가져오기
-		List<Attendance> checkOutSMS2 = attendanceService.checkOutSMS2(userNo);
-		
-		
-		// sms메시지를 가져올게 없으면 userNo의 값을 4, date의 값을 임의로 하여 스레드가 멈추는걸 방지 
-		boolean a= checkOutSMS2.isEmpty();
-		
-		if(a == true){
-			userNo = 4;
-			date = "스레드 멈춤방지";
-			
-		} else{
-			userNo = Integer.parseInt(String.valueOf(checkOutSMS2.get(0).getUserNo()));
-			
-			//데이트 객체에서 시간 나오게 하기
-			date = checkOutSMS2.get(0).getCheckOutTime();
-		}
-		
-		List<UserDetail> userDetailList = userDetailService.userDetailView(
-				userNo, userPhone);
-
-		Map<String, String> result = new HashMap<String, String>();
-	
-		
-		result.put("data1", String.valueOf(userDetailList.get(0).getUserParentPhone()));
-
-		result.put("data2", "참 좋은 독서실: " + userDetailList.get(0).getUserName()
-				+ "(이)가 " + date + "에 퇴실하였습니다.");
-
-		// 입실문자체크가 0일때 1로 변경
-		attendanceService.checkOutSMS(userNo);
-
-		return result;
-	}
-	
-	
 }

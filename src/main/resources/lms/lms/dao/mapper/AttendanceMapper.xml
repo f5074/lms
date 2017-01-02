@@ -51,7 +51,7 @@
 	<select id="checkOutSMS2" parameterType="map" resultMap="attendanceMap">
 		SELECT *
 		FROM attendance
-		WHERE user_no = #{userNo}
+		WHERE checkout_sms = 0
 	
 	</select>
 	
