@@ -190,8 +190,7 @@
 	
 															<div>
 															회원검색
-															</div>		
-
+															</div>
 															<div class="left-action profile-add">
 																<a href="#" type="button" class="btn btn-danger btn-xs">검색</a>
 															</div>
@@ -199,8 +198,8 @@
 														<div class="clearfix visible-xs"></div>
 														<div class="media-body">
 
-															<div class="row">
-																<div class="col-lg-6">
+															
+																
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">원생 이름</label>
 																		<div class="col-sm-8">
@@ -208,9 +207,9 @@
 																				placeholder="*원생 이름을 입력하여 주세요.(필수)" name="name">
 																		</div>
 																	</div>
-																</div>
+																
 
-																<div class="col-lg-6">
+																
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">학부모 이름</label>
 																		<div class="col-sm-8">
@@ -218,12 +217,12 @@
 																				name="parent_name">
 																		</div>
 																	</div>
-																</div>
-															</div>
+																
+															
 
-															<div class="row">
+															
 
-																<div class="col-lg-6">
+							
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">학부모 연락처</label>
 																		<div class="col-sm-8">
@@ -232,9 +231,9 @@
 																				name="parent_number">
 																		</div>
 																	</div>
-																</div>
 
-																<div class="col-lg-6">
+
+
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">원비 납부일</label>
 																		<div class="col-sm-8">
@@ -247,13 +246,13 @@
 																			</select>
 																		</div>
 																	</div>
-																</div>
+	
 
-															</div>
+															
 
-															<div class="row">
+															
 
-																<div class="col-lg-6">
+
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">원생 연락처</label>
 																		<div class="col-sm-8">
@@ -261,9 +260,9 @@
 																				name="child_number">
 																		</div>
 																	</div>
-																</div>
 
-																<div class="col-lg-6">
+
+	
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">수강료</label>
 																		<div class="col-sm-8">
@@ -275,13 +274,13 @@
 																			</div>
 																		</div>
 																	</div>
-																</div>
 
-															</div>
 
-															<div class="row">
+															
 
-																<div class="col-lg-6">
+															
+
+	
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">학교</label>
 																		<div class="col-sm-8">
@@ -289,9 +288,9 @@
 																				name="school_name">
 																		</div>
 																	</div>
-																</div>
 
-																<div class="col-lg-6">
+
+	
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">학년</label>
 																		<div class="col-sm-8">
@@ -299,9 +298,9 @@
 																				name="school_year">
 																		</div>
 																	</div>
-																</div>
 
-															</div>
+
+															
 
 															<div class="form-group">
 																<label class="col-lg-2 col-md-4 col-sm-4 control-label">이메일</label>
@@ -316,7 +315,7 @@
 																<div class="col-lg-10 col-md-8 col-sm-8"></div>
 															</div>
 
-															<div id="group_week"></div>
+															
 
 															<div class="form-group">
 																<label class="col-lg-2 col-md-4 col-sm-4 control-label">주소</label>
@@ -367,7 +366,7 @@
 
 										<div class="the-box text-center clear">
 											<a class="btn btn-primary btn-lg"
-												href="http://www.comeall.co.kr/app/cramschool/student/list"><i
+												href="#"><i
 												class="fa fa-reply"></i> 목록으로</a>
 											<button class="btn btn-danger btn-lg" id="addBtn">
 												<i class="fa fa-plus"></i> 등록하기
@@ -395,11 +394,12 @@
 			<!-- /.content-wrapper -->
 			<footer class="main-footer navbar-fixed-bottom">
 				<div class="container">
+					<strong>Copyright &copy; 2017 <a href="#">LMS</a>
+					</strong> All rights reserved.
 					<div class="pull-right hidden-xs">
 						<b>Version</b> 1.0.0
 					</div>
-					<strong>Copyright &copy; 2017 <a href="#">LMS</a>
-					</strong> All rights reserved.
+
 				</div>
 			</footer>
 		</div>

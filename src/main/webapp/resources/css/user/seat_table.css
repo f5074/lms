@@ -1,0 +1,68 @@
+.seat_table{
+	width: 70%;
+}
+.seat_blink{
+	width: 15px;
+	height: 20px;
+}
+.border_top{
+	width: 15px;
+	height: 20px;
+	border-top:solid black 1px;
+}
+.border_left{
+	width: 15px;
+	height: 20px;
+	border-left:solid black 1px;
+}
+.border_right{
+	width: 15px;
+	height: 20px;
+	border-right:solid black 1px;
+}
+
+.border_bottom{
+	width: 15px;
+	height: 20px;
+	border-bottom:solid black 1px;
+}
+
+
+.gray {
+	background-color: #aaaaaa;
+	text-align: center;
+	border:solid black 1px;
+
+}
+
+.pink {
+	background-color: #FFD8D8;
+	text-align: center;
+	border:solid black 1px;
+
+}
+
+.blue {
+	background-color: #B2CCFF;
+	text-align: center;
+	border:solid black 1px;
+}
+
+
+.deapblue {
+	background-color: #6799FF;
+	text-align: center;
+	border:solid black 1px;
+}
+
+.red {
+	background-color: #FAE0D4;
+	text-align: center;
+	border:solid black 1px;
+}
+
+.deapred {
+	background-color: #FFC19E;
+	text-align: center;
+	border:solid black 1px;
+}

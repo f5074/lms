@@ -303,12 +303,12 @@
 			
 			<footer class="main-footer navbar-fixed-bottom">
 				<div class="container">
+					<strong>Copyright &copy; 2017 <a href="#">LMS</a>
+					</strong> All rights reserved.
 					<div class="pull-right hidden-xs">
 						<b>Version</b> 1.0.0
 					</div>
-					<strong>Copyright &copy; 2017 <a
-						href="#">LMS</a>
-					</strong> All rights reserved.
+
 				</div>
 			</footer>
 		</div>
@@ -319,7 +319,7 @@
 
 
 
-	<c:choose>
+<c:choose>
 	<c:when test="${loginMsg!=null }">
 		<script>
 		
