@@ -164,66 +164,228 @@
 
 				<!-- Main content -->
 				<section class="content">
-					<!-- 이미지 슬라이드 -->
+					
 					<div class="box box-info">
-						<!-- /.box-header -->
 						<div class="box-body">
-							<div class="box-body">
-								<h4>회원등록</h4><hr>
+			
+							<!-- row -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="the-box">
 
-								<table>
-									<tr>
-										<td>성명 </td>
-										<td><input type="text" name="" size="20"   placeholder="" size="15"></td>							
-									</tr>
-									<tr>
-										<td>성별  </td>
-										<td>
-											<label for="M">남자</label> <input type="radio" name="gender" id="M" value="M">
-											<label for="F">여자</label> <input type="radio" name="gender" id="F" value="F"> 	
-										</td>							
-									</tr>
-									<tr>
-										<td>생년월일</td>
-										<td><input type="date" name="birth"></td>							
-									</tr>
-									<tr>
-										<td>사진</td>
-										<td><input type="file" name="photo"></td>							
-									</tr>
-									<tr>
-										<td>연락처 _휴대폰 </td>
-										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
-									</tr>
-									<tr>
-										<td>연락처_비상</td>
-										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
-									</tr>
-									<tr>
-										<td>학교 명(소속)</td>
-										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
-									</tr>
-									<tr>
-										<td>학년</td>
-										<td><input type="text" name="" size="20"   placeholder="" size="15"></td>							
-									</tr>
-									<tr>
-										<td>주소</td>
-										<td><input type="text" name="" size="20"   placeholder="" size="15"></td>							
-									</tr>							
+										<form method="POST"
+											action="http://www.comeall.co.kr/app/cramschool/proc/student_add"
+											accept-charset="UTF-8" class="form-horizontal" id="addForm">
+											<input name="_token" type="hidden"
+												value="sLNs1goRacLky1uDTFebUMuZ8gdyTSSOeYSMxYv0"> <input
+												name="profile_filename" type="hidden" value="">
 
-								</table>
-									<input type="button" value="등록"><input type="button" value="취소"> 
-									
+											<fieldset>
+												<legend>회원정보</legend>
+
+												<div class="the-box no-border property-list">
+													<div class="media">
+
+														<div class="pull-left">
+	
+															<div>
+															회원검색
+															</div>		
+
+															<div class="left-action profile-add">
+																<a href="#" type="button" class="btn btn-danger btn-xs">검색</a>
+															</div>
+														</div>
+														<div class="clearfix visible-xs"></div>
+														<div class="media-body">
+
+															<div class="row">
+																<div class="col-lg-6">
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">원생 이름</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control"
+																				placeholder="*원생 이름을 입력하여 주세요.(필수)" name="name">
+																		</div>
+																	</div>
+																</div>
+
+																<div class="col-lg-6">
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">학부모 이름</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control"
+																				name="parent_name">
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="row">
+
+																<div class="col-lg-6">
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">학부모 연락처</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control"
+																				placeholder="*학부모 연락처를 입력하여 주세요.(필수)"
+																				name="parent_number">
+																		</div>
+																	</div>
+																</div>
+
+																<div class="col-lg-6">
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">원비 납부일</label>
+																		<div class="col-sm-8">
+																			<select class="form-control" name="payment_dates">
+																				<option value="0">납부일 선택</option>
+																				<option value="1">매월 1일</option>
+																				<option value="2">매월 2일</option>
+																				<option value="3">매월 3일</option>
+
+																			</select>
+																		</div>
+																	</div>
+																</div>
+
+															</div>
+
+															<div class="row">
+
+																<div class="col-lg-6">
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">원생 연락처</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control"
+																				name="child_number">
+																		</div>
+																	</div>
+																</div>
+
+																<div class="col-lg-6">
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">수강료</label>
+																		<div class="col-sm-8">
+																			<div class="input-group">
+																				<input type="text" class="form-control"
+																					name="tuition"> <span
+																					class="input-group-addon"><i
+																					class="fa fa-won"></i></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+															</div>
+
+															<div class="row">
+
+																<div class="col-lg-6">
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">학교</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control"
+																				name="school_name">
+																		</div>
+																	</div>
+																</div>
+
+																<div class="col-lg-6">
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">학년</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control"
+																				name="school_year">
+																		</div>
+																	</div>
+																</div>
+
+															</div>
+
+															<div class="form-group">
+																<label class="col-lg-2 col-md-4 col-sm-4 control-label">이메일</label>
+																<div class="col-lg-4 col-md-8 col-sm-8">
+																	<input type="text" class="form-control" name="email">
+																</div>
+															</div>
 
 
+															<div class="form-group">
+																<label class="col-lg-2 col-md-4 col-sm-4 control-label">반선택</label>
+																<div class="col-lg-10 col-md-8 col-sm-8"></div>
+															</div>
+
+															<div id="group_week"></div>
+
+															<div class="form-group">
+																<label class="col-lg-2 col-md-4 col-sm-4 control-label">주소</label>
+																<div class="col-lg-10 col-md-8 col-sm-8">
+																	<input type="text" class="form-control" name="address">
+																</div>
+															</div>
+
+															<div class="form-group">
+																<label class="col-lg-2 col-md-4 col-sm-4 control-label">메모</label>
+																<div class="col-lg-10 col-md-8 col-sm-8">
+																	<textarea class="form-control" rows="6" name="memo"></textarea>
+																</div>
+															</div>
+
+															<div class="form-group">
+																<label
+																	class="col-lg-2 col-md-4 col-sm-4 col-xs-8 control-label">등원문자
+																	알림 <i class="fa fa-question-circle"
+																	data-toggle="tooltip" title=""
+																	data-original-title="등원시 자동으로 문자 보내는 기능입니다."></i>
+																</label>
+																<div class="col-lg-10 col-md-8 col-sm-8 col-xs-4"
+																	style="padding-top: 7px;">
+																	<div class="onoffswitch">
+																		<input type="checkbox" class="onoffswitch-checkbox"
+																			name="option1" value="Y" id="switch-1" checked="">
+																		<label class="onoffswitch-label" for="switch-1"
+																			style="height: 20px"> <span
+																			class="onoffswitch-inner"></span> <span
+																			class="onoffswitch-switch"
+																			style="background: #CCCCCC;"></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+
+												</div>
+
+
+
+											</fieldset>
+										</form>
+
+										<div class="the-box text-center clear">
+											<a class="btn btn-primary btn-lg"
+												href="http://www.comeall.co.kr/app/cramschool/student/list"><i
+												class="fa fa-reply"></i> 목록으로</a>
+											<button class="btn btn-danger btn-lg" id="addBtn">
+												<i class="fa fa-plus"></i> 등록하기
+											</button>
+										</div>
+
+									</div>
+								</div>
 							</div>
-							<!-- /.box-body -->
-							<!-- /.table-responsive -->
+							<!-- /.row -->
+
+
+
+
+
+
+
 						</div>
-						<!-- /.box-body -->
-
-
 					</div>
 
 				</section>
