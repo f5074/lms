@@ -15,17 +15,17 @@ public class PaymentController {
 	@Autowired private PaymentService paymentService;
 	
 	//결제목록보기
-	@RequestMapping("/payment")
+	@RequestMapping("/user/payment")
 	public String payment(Model model){
 		List<Payment> payment = paymentService.paymentList();
 		model.addAttribute("payment", payment);
-		return "/payment/payment";
+		return "/user/payment/payment";
 	}
 	
-	@RequestMapping("/payment/payment")
+	@RequestMapping("/user/payment/payment")
 	public String payment2(Model model){
 
-		return "/payment/payment";
+		return "/user/payment/payment";
 	}
 	
 }

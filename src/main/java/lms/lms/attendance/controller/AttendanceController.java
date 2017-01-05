@@ -17,15 +17,15 @@ public class AttendanceController {
 	@Autowired private AttendanceService attendanceService;
 	
 	//출석 목록보기
-	@RequestMapping("/attendance")
+	@RequestMapping("/user/attendance")
 	public String attendance(Model model){
 		List<Attendance> attendance = attendanceService.attendanceList();
 		model.addAttribute("attendance",attendance);
-		return "/attendance/attendance";
+		return "/user/attendance/attendance";
 	}
 	
 	//입실 시 입실 시간 추가 
-	@RequestMapping("/attendanceInsert")
+	@RequestMapping("/user/attendanceInsert")
 	public String attendanceInsert(HttpSession session, Model model){
 		int userNo= Integer.parseInt((String)session.getAttribute("userNo"));
 		attendanceService.checkInTime(userNo);	

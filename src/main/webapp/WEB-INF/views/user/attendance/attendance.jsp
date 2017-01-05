@@ -81,7 +81,7 @@
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">좌석관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/lms/seat/seat">좌석이동</a></li>
+									<li><a href="/lms/user/seat/seat">좌석이동</a></li>
 									<li><a href="#">-</a></li>
 									<li><a href="#">-</a></li>
 
@@ -90,7 +90,7 @@
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">회원관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/lms/userDetail/userDetail">회원등록</a></li>
+									<li><a href="/lms/user/userDetail/userDetail">회원등록</a></li>
 									<li><a href="#">-</a></li>
 									<li><a href="#">-</a></li>
 								</ul>
@@ -98,7 +98,7 @@
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">결제관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/lms/payment/payment">결제등록</a></li>
+									<li><a href="/lms/user/payment/payment">결제등록</a></li>
 									<li><a href="#">-</a></li>
 									<li><a href="#">-</a></li>
 								</ul>

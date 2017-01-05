@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserDetailController {
 	@Autowired private UserDetailService userDetailService;
 		
-	@RequestMapping("/userDetail")
+	@RequestMapping("/user/userDetail")
 	public String userDetail(Model model){
 		List<UserDetail> userDetail = userDetailService.userDetailList();
 		model.addAttribute("userDetail",userDetail);
-		return "/userDetail/userDetail";
+		return "/user/userDetail/userDetail";
 	}
 	
-	@RequestMapping("/userDetail/userDetail")
+	@RequestMapping("/user/userDetail/userDetail")
 	public String userDetail2(Model model){
 
-		return "/userDetail/userDetail";
+		return "/user/userDetail/userDetail";
 	}
 		
 }

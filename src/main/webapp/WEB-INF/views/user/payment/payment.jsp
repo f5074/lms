@@ -81,7 +81,7 @@
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">좌석관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/lms/seat/seat">좌석이동</a></li>
+									<li><a href="/lms/user/seat/seat">좌석이동</a></li>
 									<li><a href="#">-</a></li>
 									<li><a href="#">-</a></li>
 
@@ -90,7 +90,7 @@
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">회원관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/lms/userDetail/userDetail">회원등록</a></li>
+									<li><a href="/lms/user/userDetail/userDetail">회원등록</a></li>
 									<li><a href="#">-</a></li>
 									<li><a href="#">-</a></li>
 								</ul>
@@ -98,7 +98,7 @@
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">결제관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/lms/payment/payment">결제등록</a></li>
+									<li><a href="/lms/user/payment/payment">결제등록</a></li>
 									<li><a href="#">-</a></li>
 									<li><a href="#">-</a></li>
 								</ul>
@@ -163,12 +163,46 @@
 
 				<!-- Main content -->
 				<section class="content">
+					<!-- 이미지 슬라이드 -->
 					<div class="box box-info">
 						<!-- /.box-header -->
 						<div class="box-body">
 							<div class="box-body">
-									<img src="<c:url value="/img/seat.jpg"/>" alt="First slide"
-												style="margin-left: auto; margin-right: auto;">
+								
+								<h4>결제등록</h4><hr>
+
+								<table>
+									<tr>
+										<td>성명 </td>
+										<td><input type="text" name="" size="20"   placeholder="" size="15"></td>							
+									</tr>
+
+									<tr>
+										<td>시작일</td>
+										<td><input type="date" name="birth"></td>							
+									</tr>
+									<tr>
+										<td>종료일</td>
+										<td><input type="date" name="birth"></td>							
+									</tr>
+
+									<tr>
+										<td>이용요금 </td>
+										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
+									</tr>
+									<tr>
+										<td>결제방식</td>
+										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
+									</tr>
+									<tr>
+										<td>결제메모</td>
+										<td>	<input type="text" name=""    placeholder="" size="15"></td>							
+									</tr>			
+
+								</table>
+									<input type="button" value="등록"><input type="button" value="취소"> 
+								
+								
 							</div>
 							<!-- /.box-body -->
 							<!-- /.table-responsive -->
@@ -176,45 +210,8 @@
 						<!-- /.box-body -->
 
 					</div>
-					<!-- 두번째 꺼 -->
-					<div class="row">
-						<div class="col-md-6">
-							<div class="box box-info">
-								<div class="box-header with-border">
-									<h3 class="box-title">#</h3>
-									<div class="box-tools pull-right">
 
-									</div>
-								</div>
-								<!-- /.box-header -->
-								<div class="box-body">
-									<div id="noticeView" class="table-responsive"></div>
-									<!-- /.table-responsive -->
-								</div>
-								<!-- /.box-body -->
-							</div>
-						</div>
-						<!-- 두번째꺼 -->
 
-						<!-- 두번째 꺼 -->
-						<div class="col-md-6">
-							<div class="box box-info">
-								<div class="box-header with-border">
-									<h3 class="box-title">#</h3>
-									<div class="box-tools pull-right">
-
-									</div>
-								</div>
-								<!-- /.box-header -->
-								<div class="box-body">
-									<div id="boardView" class="table-responsive"></div>
-									<!-- /.table-responsive -->
-								</div>
-								<!-- /.box-body -->
-							</div>
-						</div>
-						<!-- 두번째꺼 -->
-					</div>
 
 				</section>
 				<!-- /.content -->
