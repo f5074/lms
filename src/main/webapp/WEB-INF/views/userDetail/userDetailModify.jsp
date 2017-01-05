@@ -20,53 +20,49 @@
 <link rel="stylesheet" href="<c:url value="/css/_all-skins.min.css"/>">
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-
-<link rel="stylesheet" href="<c:url value="/css/sidebara.css"/>">
-<link rel="stylesheet" href="<c:url value="/css/sidebarb.css"/>">
-
-
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-blue layout-top-nav">
-	
+
 	<!-- 작은 모달 -->
-	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog modal-sm">
-	    <div class="modal-content">
-	      <div class="modal-header" id="modalHeader">
-		<button type="button"  class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-		<h4 class="modal-title" id="modalTitle">LMS 알림메시지</h4>
-	      </div>
-	      <div class="modal-body" id="modalContent">
-			...
-	      </div>
-	      <div class="modal-footer" id="modalBtns">
-		<button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-	      </div>
-	    </div>
-	  </div>
-	</div><!-- 모달 END -->
-	
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header" id="modalHeader">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="modalTitle">LMS 알림메시지</h4>
+				</div>
+				<div class="modal-body" id="modalContent">...</div>
+				<div class="modal-footer" id="modalBtns">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 모달 END -->
+
 	<!-- 로그아웃용 작은 모달 -->
-	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog modal-sm">
-	    <div class="modal-content">
-	      <div class="modal-header" id="modalHeader1">
-		<button type="button" class="close" data-dismiss="modal">
-		<span aria-hidden="true">×</span>
-		<span class="sr-only">Close</span>
-		</button>
-		<h4 class="modal-title" id="modalTitle1">LMS 알림메시지</h4>
-	      </div>
-	      <div class="modal-body" id="modalContent1">
-			로그아웃 되었습니다.
-	      </div>
-	      <div class="modal-footer" id="modalBtns1">
-		<button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-	      </div>
-	    </div>
-	  </div>
-	</div><!-- 모달 END -->
-	
+	<div class="modal fade" id="modal1" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header" id="modalHeader1">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">×</span> <span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="modalTitle1">LMS 알림메시지</h4>
+				</div>
+				<div class="modal-body" id="modalContent1">로그아웃 되었습니다.</div>
+				<div class="modal-footer" id="modalBtns1">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 모달 END -->
+
 	<div class="wrapper">
 		<header class="main-header">
 			<nav class="navbar navbar-static-top">
@@ -96,8 +92,8 @@
 								data-toggle="dropdown">회원관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="/lms/userDetail/userDetail">회원등록</a></li>
-									<li><a href="#">회원정보</a></li>
-									<li><a href="/lms/userDetail/userDetailModify">회원수정</a></li>
+									<li><a href="#">-</a></li>
+									<li><a href="#">-</a></li>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -173,105 +169,60 @@
 						<!-- /.box-header -->
 						<div class="box-body">
 							<div class="box-body">
-								<div id="carousel-example-generic" class="carousel slide"
-									data-ride="carousel">
-									<ol class="carousel-indicators" style="float: right">
-										<li data-target="#carousel-example-generic" data-slide-to="0"
-											class="active"></li>
-										<li data-target="#carousel-example-generic" data-slide-to="1"
-											class=""></li>
-										<li data-target="#carousel-example-generic" data-slide-to="2"
-											class=""></li>
-									</ol>
-									<div class="carousel-inner">
-										<div class="item active">
-											<img src="<c:url value="/img/1.jpg"/>" alt="First slide"
-												style="margin-left: auto; margin-right: auto;">
-											<div class="carousel-caption">First Slide</div>
-										</div>
-										<div class="item">
-											<img src="<c:url value="/img/2.jpg"/>" alt="Second slide"
-												style="margin-left: auto; margin-right: auto;">
-											<div class="carousel-caption">Second Slide</div>
-										</div>
-										<div class="item">
-											<img src="<c:url value="/img/3.jpg"/>" alt="Third slide"
-												style="margin-left: auto; margin-right: auto;">
-											<div class="carousel-caption">Third Slide</div>
-										</div>
-									</div>
-									<a class="left carousel-control"
-										href="#carousel-example-generic" data-slide="prev"> <span
-										class="fa fa-angle-left"></span>
-									</a> <a class="right carousel-control"
-										href="#carousel-example-generic" data-slide="next"> <span
-										class="fa fa-angle-right"></span>
-									</a>
-								</div>
+								<h4>회원수정</h4><hr>
+
+								<table>
+									<tr>
+										<td>성명 </td>
+										<td><input type="text" name="" size="20"   placeholder="" size="15"></td>							
+									</tr>
+									<tr>
+										<td>성별  </td>
+										<td>
+											<label for="M">남자</label> <input type="radio" name="gender" id="M" value="M">
+											<label for="F">여자</label> <input type="radio" name="gender" id="F" value="F"> 	
+										</td>							
+									</tr>
+									<tr>
+										<td>생년월일</td>
+										<td><input type="date" name="birth"></td>							
+									</tr>
+									<tr>
+										<td>사진</td>
+										<td><input type="file" name="photo"></td>							
+									</tr>
+									<tr>
+										<td>연락처 _휴대폰 </td>
+										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
+									</tr>
+									<tr>
+										<td>연락처_비상</td>
+										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
+									</tr>
+									<tr>
+										<td>학교 명(소속)</td>
+										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
+									</tr>
+									<tr>
+										<td>학년</td>
+										<td><input type="text" name="" size="20"   placeholder="" size="15"></td>							
+									</tr>
+									<tr>
+										<td>주소</td>
+										<td><input type="text" name="" size="20"   placeholder="" size="15"></td>							
+									</tr>							
+
+								</table>
+									<input type="button" value="수정"><input type="button" value="취소"> 
+									
+
+
 							</div>
 							<!-- /.box-body -->
 							<!-- /.table-responsive -->
 						</div>
 						<!-- /.box-body -->
 
-					</div>
-					<!-- 두번째 꺼 -->
-					<div class="row">
-						<div class="col-md-6">
-							<div class="box box-info">
-								<div class="box-header with-border">
-									<h3 class="box-title">입출결현황</h3>
-									<div class="box-tools pull-right">
-
-									</div>
-								</div>
-								<!-- /.box-header -->
-								<div class="box-body">
-									<div id="noticeView" class="table-responsive"></div>
-									<!-- /.table-responsive -->
-								</div>
-								<!-- /.box-body -->
-							</div>
-						</div>
-						<!-- 두번째꺼 -->
-
-						<!-- 두번째 꺼 -->
-						<div class="col-md-6">
-							<div class="box box-info">
-								<div class="box-header with-border">
-									<h3 class="box-title">공지사항</h3>
-									<div class="box-tools pull-right">
-
-									</div>
-								</div>
-								<!-- /.box-header -->
-								<div class="box-body">
-									<div id="boardView" class="table-responsive"></div>
-									<!-- /.table-responsive -->
-								</div>
-								<!-- /.box-body -->
-							</div>
-						</div>
-						<!-- 두번째꺼 -->
-						
-					</div>
-					<div class="box box-info">
-						<!-- /.box-header -->
-						<div class="box-body">
-							<div class="box-body">
-								<div class="box-header with-border">
-									<h3 class="box-title">좌석현황</h3>
-									<div class="box-tools pull-right">
-
-									</div>
-								</div>
-									<img src="<c:url value="/img/seat.jpg"/>" alt="First slide"
-												style="margin-left: auto; margin-right: auto;">
-							</div>
-							<!-- /.box-body -->
-							<!-- /.table-responsive -->
-						</div>
-						<!-- /.box-body -->
 
 					</div>
 
@@ -285,8 +236,7 @@
 					<div class="pull-right hidden-xs">
 						<b>Version</b> 1.0.0
 					</div>
-					<strong>Copyright &copy; 2017 <a
-						href="#">LMS</a>
+					<strong>Copyright &copy; 2017 <a href="#">LMS</a>
 					</strong> All rights reserved.
 				</div>
 			</footer>

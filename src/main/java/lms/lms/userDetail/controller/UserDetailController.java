@@ -21,7 +21,10 @@ public class UserDetailController {
 		return "/userDetail/userDetail";
 	}
 	
+	@RequestMapping("/userDetail/userDetail")
+	public String userDetail2(Model model){
+
+		return "/userDetail/userDetail";
+	}
 		
-		
-	
 }

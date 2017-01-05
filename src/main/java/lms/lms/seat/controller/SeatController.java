@@ -22,6 +22,10 @@ public class SeatController {
 		return "/seat/seat";
 	}
 	
-	
+	@RequestMapping("/seat/seat")
+	public String seat2(Model model){
+
+		return "/seat/seat";
+	}
 	
 }

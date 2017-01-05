@@ -22,4 +22,10 @@ public class PaymentController {
 		return "/payment/payment";
 	}
 	
+	@RequestMapping("/payment/payment")
+	public String payment2(Model model){
+
+		return "/payment/payment";
+	}
+	
 }
