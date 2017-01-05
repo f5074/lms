@@ -1,6 +1,5 @@
 package lms.lms.attendance.service;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;

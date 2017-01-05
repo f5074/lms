@@ -1,6 +1,5 @@
 package lms.lms.attendance.service;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import lms.lms.attendance.dao.AttendanceDao;

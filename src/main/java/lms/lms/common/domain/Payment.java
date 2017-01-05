@@ -3,22 +3,15 @@ package lms.lms.common.domain;
 import java.sql.Date;
 
 public class Payment {	
-/*
- 	PAYMENT_NO 		NUMBER, 		결제번호 
-	USER_NO 		NUMBER, 		회원번호 
-	SEAT_NUMBER 	NUMBER, 		좌석번호 
-	STARTING_DATE	DATE, 			등록시작일 
-	ENDING_DATE 	DATE, 			등록종료일 
-	PAYMENT_COST 	NUMBER, 		이용요금 
-	PAYMENT_PLAN 	VARCHAR2(20) 	결제방식 
-*/
+
 	private int paymentNo;
 	private int userNo;
-	private int seatNumber;
-	private Date startingDate;
-	private Date endingDate;
+	private int seatNo;
+	private Date paymentStart;
+	private Date paymentEnd;
 	private int paymentCost;
 	private String paymentPlan;	
+	private String paymentMemo;
 	
 	public int getPaymentNo() {
 		return paymentNo;
@@ -32,23 +25,23 @@ public class Payment {
 	public void setUserNo(int userNo) {
 		this.userNo = userNo;
 	}
-	public int getSeatNumber() {
-		return seatNumber;
+	public int getSeatNo() {
+		return seatNo;
 	}
-	public void setSeatNumber(int seatNumber) {
-		this.seatNumber = seatNumber;
+	public void setSeatNo(int seatNo) {
+		this.seatNo = seatNo;
 	}
-	public Date getStartingDate() {
-		return startingDate;
+	public Date getPaymentStart() {
+		return paymentStart;
 	}
-	public void setStartingDate(Date startingDate) {
-		this.startingDate = startingDate;
+	public void setPaymentStart(Date paymentStart) {
+		this.paymentStart = paymentStart;
 	}
-	public Date getEndingDate() {
-		return endingDate;
+	public Date getPaymentEnd() {
+		return paymentEnd;
 	}
-	public void setEndingDate(Date endingDate) {
-		this.endingDate = endingDate;
+	public void setPaymentEnd(Date paymentEnd) {
+		this.paymentEnd = paymentEnd;
 	}
 	public int getPaymentCost() {
 		return paymentCost;
@@ -62,4 +55,14 @@ public class Payment {
 	public void setPaymentPlan(String paymentPlan) {
 		this.paymentPlan = paymentPlan;
 	}
+	public String getPaymentMemo() {
+		return paymentMemo;
+	}
+	public void setPaymentMemo(String paymentMemo) {
+		this.paymentMemo = paymentMemo;
+	}
+	
+	
+	
+
 }

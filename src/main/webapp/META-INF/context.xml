@@ -4,12 +4,12 @@
 	<Resource name="jdbc/lms"  
 		   auth="Container"             
 		   type="javax.sql.DataSource"  
-		   username="lms"              
-		   password="lms"              
-		   driverClassName="oracle.jdbc.driver.OracleDriver"
+		   username="chamlib"              
+		   password="chamlib1"              
+		   driverClassName="com.mysql.jdbc.Driver"
 		   factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
-		   url="jdbc:oracle:thin:@192.168.43.168:1521:xe" 
-		   maxActive="2" 
+		   url="jdbc:mysql://112.175.50.189:3306/chamlib?autoReconnection=true" 
+		   maxActive="10" 
 		   minIdle="2"/>	   
 		   
 </Context>

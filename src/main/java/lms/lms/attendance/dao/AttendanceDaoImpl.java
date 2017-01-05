@@ -1,6 +1,5 @@
 package lms.lms.attendance.dao;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import lms.lms.attendance.dao.mapper.AttendanceMapper;

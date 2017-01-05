@@ -42,9 +42,9 @@
 	</insert>
 	
 	<update id="checkOutSMS" parameterType="map">
-			UPDATE attendance 
-			SET checkout_sms = 1
-			WHERE user_no = #{userNo}
+		UPDATE attendance 
+		SET checkout_sms = 1
+		WHERE user_no = #{userNo}
 	
 	</update>
 	

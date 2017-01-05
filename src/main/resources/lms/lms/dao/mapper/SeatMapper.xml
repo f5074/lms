@@ -3,10 +3,12 @@
 <mapper namespace="lms.lms.seat.dao.mapper.SeatMapper">
 	<resultMap  id="seatMap" type="lms.lms.common.domain.Seat">
 		<result property="seatNo" column="seat_no"/>	
+		<result property="userNo" column="user_no"/>	
+		<result property="attendanceNo" column="attendance_no"/>	
 		<result property="seatCheck" column="seat_check"/>	
 	</resultMap>
 	<select id="seatList" parameterType="lms.lms.common.domain.Seat" resultMap="seatMap">
 		SELECT *
-		FROM seat ORDER BY seat_no
+		FROM seat
 	</select>	
 </mapper>

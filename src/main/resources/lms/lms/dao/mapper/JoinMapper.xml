@@ -8,10 +8,13 @@
 	</resultMap>
 	
 	<select id="duplCheck" parameterType="lms.lms.common.domain.User" resultMap="joinMap">
-		select user_id userId FROM USERS WHERE user_id=#{userId}
+		SELECT user_id userId 
+		FROM users 
+		WHERE user_id=#{userId}
 	</select>
 	
 	<insert id="joinUser" parameterType="lms.lms.common.domain.User">
-		INSERT INTO users VALUES (#{userId},#{userPw},#{email},sysdate)
+		INSERT INTO users 
+		VALUES (#{userId},#{userPw},#{email},now())
 	</insert>
 </mapper>

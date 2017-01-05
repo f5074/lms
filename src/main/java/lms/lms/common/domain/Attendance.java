@@ -1,7 +1,5 @@
 package lms.lms.common.domain;
 
-import java.sql.Date;
-
 public class Attendance {
 /*
   	ATTENDANCE_NO 	NUMBER, 입퇴실번호 

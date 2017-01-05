@@ -41,13 +41,6 @@
 			</snapshots>
 		</repository>
 
-		<!-- 02. DB 추가 시작 -->
-		<repository>
-			<id>oracle</id>
-			<name>Oracle JDBC repository</name>
-			<url>http://maven.jahia.org/maven2</url>
-		</repository>
-		<!-- 02. DB 추가 끝 -->
 
 
 	</repositories>
@@ -125,11 +118,7 @@
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.2.0</version>
 		</dependency>
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>11.1.0.7.0</version>
-		</dependency>
+
 		<!-- 02. DB관련 끝 -->
 
 		<!-- 03. File Upload 추가 시작 -->
@@ -159,7 +148,13 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
         </dependency>
-		
+        
+        <!-- 06. DB관련 MySQL -->
+		<dependency>
+   			<groupId>mysql</groupId>
+    		<artifactId>mysql-connector-java</artifactId>
+   		 	<version>5.1.31</version>
+		</dependency>
 
 	</dependencies>
 

@@ -4,11 +4,12 @@
 	<resultMap  id="paymentMap" type="lms.lms.common.domain.Payment">
 		<result property="paymentNo" column="payment_no"/>	
 		<result property="userNo" column="user_no"/>	
-		<result property="seatNumber" column="seat_number"></result>	
-		<result property="startingDate" column="starting_date"></result>	
-		<result property="endingDate" column="ending_date"></result>	
+		<result property="seatNo" column="seat_no"></result>	
+		<result property="paymentStart" column="payment_start"></result>	
+		<result property="paymentEnd" column="payment_end"></result>	
 		<result property="paymentCost" column="payment_cost"></result>	
 		<result property="paymentPlan" column="payment_plan"></result>	
+		<result property="paymentPlan" column="payment_memo"></result>	
 	</resultMap>
 	<select id="paymentList" parameterType="lms.lms.common.domain.Payment" resultMap="paymentMap">
 		SELECT *

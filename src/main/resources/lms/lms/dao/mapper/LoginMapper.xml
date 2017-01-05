@@ -8,7 +8,9 @@
 	</resultMap>
 	
 	<select id="loginCheck" parameterType="lms.lms.common.domain.User" resultMap="loginMap">
-		select user_id userId, user_pw userPw FROM users WHERE user_id=#{userId} and user_pw=#{userPw}
+		SELECT user_id userId, user_pw userPw 
+		FROM users 
+		WHERE user_id=#{userId} and user_pw=#{userPw}
 	</select>
 
 </mapper>
