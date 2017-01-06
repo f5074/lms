@@ -31,8 +31,6 @@ public class AndroidController {
 
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
 		String userPhone = request.getParameter("userPhone");
-		System.out.println(userNo);
-		System.out.println(userPhone);
 		List<UserDetail> userDetail = userDetailService.sendSMS(userNo,
 				userPhone);
 		

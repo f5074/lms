@@ -15,10 +15,19 @@
 	</select>
 	
 	<insert id="checkInTime" parameterType="int">
+<!-- 	오라클용 
 		INSERT INTO attendance(attendance_no,user_no,checkin_time,checkin_sms)
 		SELECT seq_attendance_no.nextval, user_no userNo, sysdate, 0
-		FROM users_detail
+		FROM user_detail
+		WHERE user_no = #{userNo} -->
+		
+		<!-- MySQL용 -->
+		INSERT INTO attendance(user_no,checkin_time,checkin_sms)
+		SELECT user_no userNo, now(), 0
+		FROM user_detail
 		WHERE user_no = #{userNo}
+		
+
 	</insert>
 	
 	<update id="checkInSMS" parameterType="map">
@@ -35,9 +44,15 @@
 	</select>
 	
 	<insert id="checkOutTime" parameterType="int">
+<!-- 	오라클용
 		INSERT INTO attendance(attendance_no,user_no,checkout_time,checkout_sms)
 		SELECT seq_attendance_no.nextval, user_no userNo, sysdate, 0
-		FROM users_detail
+		FROM user_detail
+		WHERE user_no = #{userNo} -->
+		
+		INSERT INTO attendance(user_no,checkout_time,checkout_sms)
+		SELECT user_no userNo, now(), 0
+		FROM user_detail
 		WHERE user_no = #{userNo}
 	</insert>
 	
