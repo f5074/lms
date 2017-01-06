@@ -172,10 +172,7 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="the-box">
-
-										<form method="POST"
-											action="http://www.comeall.co.kr/app/cramschool/proc/student_add"
-											accept-charset="UTF-8" class="form-horizontal" id="addForm">
+										<form method="POST" action="#" accept-charset="UTF-8" class="form-horizontal" id="addForm">
 											<input name="_token" type="hidden"
 												value="sLNs1goRacLky1uDTFebUMuZ8gdyTSSOeYSMxYv0"> <input
 												name="profile_filename" type="hidden" value="">
@@ -188,170 +185,127 @@
 
 														<div class="pull-left">
 	
-															<div>
-															회원검색
-															</div>
-															<div class="left-action profile-add">
-																<a href="#" type="button" class="btn btn-danger btn-xs">검색</a>
-															</div>
+															<div>회원검색 <a href="#" type="button" class="btn btn-danger btn-xs">검색</a></div>
+															<div><input type="text" class="form-control" name="#"></div>
 														</div>
 														<div class="clearfix visible-xs"></div>
 														<div class="media-body">
 
 															
-																
-																	<div class="form-group">
-																		<label class="col-sm-4 control-label">원생 이름</label>
-																		<div class="col-sm-8">
-																			<input type="text" class="form-control"
-																				placeholder="*원생 이름을 입력하여 주세요.(필수)" name="name">
-																		</div>
-																	</div>
-																
-
-																
-																	<div class="form-group">
-																		<label class="col-sm-4 control-label">학부모 이름</label>
-																		<div class="col-sm-8">
-																			<input type="text" class="form-control"
-																				name="parent_name">
-																		</div>
-																	</div>
-																
 															
-
-															
-
-							
 																	<div class="form-group">
-																		<label class="col-sm-4 control-label">학부모 연락처</label>
+																		<label class="col-sm-4 control-label">이름</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control"
-																				placeholder="*학부모 연락처를 입력하여 주세요.(필수)"
-																				name="parent_number">
+																			<input type="text" class="form-control" placeholder="필수 입력" name="#" >
 																		</div>
 																	</div>
-
-
-
-																	<div class="form-group">
-																		<label class="col-sm-4 control-label">원비 납부일</label>
+<!-- 																	<div class="form-group">
+																		<label class="col-sm-4 control-label">성별</label>
 																		<div class="col-sm-8">
-																			<select class="form-control" name="payment_dates">
-																				<option value="0">납부일 선택</option>
-																				<option value="1">매월 1일</option>
-																				<option value="2">매월 2일</option>
-																				<option value="3">매월 3일</option>
-
-																			</select>
+																			<label for="M">남성</label> <input type="radio" name="gender" id="M" value="M">
+																			<label for="F">여성</label> <input type="radio" name="gender" id="F" value="F"> 	
+																		</div>
+																	</div>	 -->																
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">연락처_학생</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control" placeholder="필수 입력" name="#">
 																		</div>
 																	</div>
-	
-
-															
-
-															
-
-
 																	<div class="form-group">
-																		<label class="col-sm-4 control-label">원생 연락처</label>
+																		<label class="col-sm-4 control-label">학교명(소속)</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control"
-																				name="child_number">
+																			<input type="text" class="form-control" name="#">
 																		</div>
-																	</div>
+																	</div>																	
 
-
-	
-																	<div class="form-group">
-																		<label class="col-sm-4 control-label">수강료</label>
-																		<div class="col-sm-8">
-																			<div class="input-group">
-																				<input type="text" class="form-control"
-																					name="tuition"> <span
-																					class="input-group-addon"><i
-																					class="fa fa-won"></i></span>
-																			</div>
-																		</div>
-																	</div>
-
-
-															
-
-															
-
-	
-																	<div class="form-group">
-																		<label class="col-sm-4 control-label">학교</label>
-																		<div class="col-sm-8">
-																			<input type="text" class="form-control"
-																				name="school_name">
-																		</div>
-																	</div>
-
-
-	
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">학년</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control"
-																				name="school_year">
+																			<input type="text" class="form-control" name="#">
+																		</div>
+																	</div>
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">주소</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control" name="#" size="50">
+																		</div>
+																	</div>
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">연락처_부모</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control" placeholder="필수 입력" name="#">
+																		</div>
+																	</div>
+																	
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">문자 알림 
+																			<i class="fa fa-question-circle" data-toggle="tooltip" title="" data-original-title="입퇴실 시 문자전송하는기능"></i>
+																		</label>
+																		<div class="col-sm-8">
+																			<div class="onoffswitch">
+																				<input type="checkbox" class="onoffswitch-checkbox" name="option1" value="Y" id="switch-1" checked="">
+																				<label class="onoffswitch-label" for="switch-1" style="height: 20px"> 
+																					<span class="onoffswitch-inner"></span>
+																					<span class="onoffswitch-switch" style="background: #CCCCCC;"></span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																	
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">좌석번호</label>
+																		<div class="col-sm-8">
+																			<select class="form-control" name="#">
+																				<option value="0">선택</option>
+																				<option value="1">1</option>
+																				<option value="2">2</option>
+																				<option value="3">3</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">등록시작일</label>
+																		<div class="col-sm-8">
+																			<input type="date" class="form-control" name="#">
+																		</div>
+																	</div>
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">등록종료일</label>
+																		<div class="col-sm-8">
+																			<input type="date" class="form-control" name="#">
+																		</div>
+																	</div>
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">이용요금</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control" name="#">
+																		</div>
+																	</div>
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">결제방식</label>
+																		<div class="col-sm-8">
+																			<input type="text" class="form-control" name="#">
 																		</div>
 																	</div>
 
-
-															
-
-															<div class="form-group">
-																<label class="col-lg-2 col-md-4 col-sm-4 control-label">이메일</label>
-																<div class="col-lg-4 col-md-8 col-sm-8">
-																	<input type="text" class="form-control" name="email">
-																</div>
-															</div>
-
-
-															<div class="form-group">
-																<label class="col-lg-2 col-md-4 col-sm-4 control-label">반선택</label>
-																<div class="col-lg-10 col-md-8 col-sm-8"></div>
-															</div>
-
-															
-
-															<div class="form-group">
-																<label class="col-lg-2 col-md-4 col-sm-4 control-label">주소</label>
-																<div class="col-lg-10 col-md-8 col-sm-8">
-																	<input type="text" class="form-control" name="address">
-																</div>
-															</div>
-
-															<div class="form-group">
-																<label class="col-lg-2 col-md-4 col-sm-4 control-label">메모</label>
-																<div class="col-lg-10 col-md-8 col-sm-8">
-																	<textarea class="form-control" rows="6" name="memo"></textarea>
-																</div>
-															</div>
-
-															<div class="form-group">
-																<label
-																	class="col-lg-2 col-md-4 col-sm-4 col-xs-8 control-label">등원문자
-																	알림 <i class="fa fa-question-circle"
-																	data-toggle="tooltip" title=""
-																	data-original-title="등원시 자동으로 문자 보내는 기능입니다."></i>
-																</label>
-																<div class="col-lg-10 col-md-8 col-sm-8 col-xs-4"
-																	style="padding-top: 7px;">
-																	<div class="onoffswitch">
-																		<input type="checkbox" class="onoffswitch-checkbox"
-																			name="option1" value="Y" id="switch-1" checked="">
-																		<label class="onoffswitch-label" for="switch-1"
-																			style="height: 20px"> <span
-																			class="onoffswitch-inner"></span> <span
-																			class="onoffswitch-switch"
-																			style="background: #CCCCCC;"></span>
-																		</label>
+																	<div class="form-group">
+																		<label class="col-sm-4 control-label">메모</label>
+																		<div class="col-sm-8">
+																			<textarea class="form-control" rows="4" name="#"></textarea>
+																		</div>
 																	</div>
-																</div>
-															</div>
+																	
+																	
+
+<!-- 																<div class="form-group">
+																		<label class="col-sm-4 control-label">수강료</label>
+																		<div class="col-sm-8">
+																			<div class="input-group">
+																				<input type="text" class="form-control" name="tuition"> <span class="input-group-addon"><i class="fa fa-won"></i></span>
+																			</div>
+																		</div>
+																	</div> -->
 
 
 														</div>
@@ -365,12 +319,8 @@
 										</form>
 
 										<div class="the-box text-center clear">
-											<a class="btn btn-primary btn-lg"
-												href="#"><i
-												class="fa fa-reply"></i> 목록으로</a>
-											<button class="btn btn-danger btn-lg" id="addBtn">
-												<i class="fa fa-plus"></i> 등록하기
-											</button>
+											<a class="btn btn-primary btn-lg" href="/lms/"><i class="fa fa-reply"></i> 뒤로가기</a>
+											<button class="btn btn-danger btn-lg" id="addBtn"><i class="fa fa-plus"></i> 등록하기 </button>
 										</div>
 
 									</div>

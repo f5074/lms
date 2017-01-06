@@ -25,6 +25,7 @@
 <script src="<c:url value="/js/app.min.js"/>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<c:url value="/js/demo.js"/>"></script>
+<link rel="stylesheet" href="<c:url value="/css/user/seat_table.css"/>">
 
 
 
@@ -190,33 +191,31 @@
 					<!-- 이미지 슬라이드 -->
 					<div class="box box-info">
 						<!-- /.box-header -->
+						<div class="box-header with-border">
+						<h3 class="box-title">EBS 링크</h3>
 						<div class="box-body">
 							<div class="box-body">
+							
+								
+
 								<div id="carousel-example-generic" class="carousel slide"
 									data-ride="carousel">
-									<ol class="carousel-indicators" style="float: right">
-										<li data-target="#carousel-example-generic" data-slide-to="0"
-											class="active"></li>
-										<li data-target="#carousel-example-generic" data-slide-to="1"
-											class=""></li>
-										<li data-target="#carousel-example-generic" data-slide-to="2"
-											class=""></li>
-									</ol>
+
 									<div class="carousel-inner">
 										<div class="item active">
 											<img src="<c:url value="/img/1.jpg"/>" alt="First slide"
 												style="margin-left: auto; margin-right: auto;">
-											<div class="carousel-caption">First Slide</div>
+											<div class="carousel-caption"></div>
 										</div>
 										<div class="item">
 											<img src="<c:url value="/img/2.jpg"/>" alt="Second slide"
 												style="margin-left: auto; margin-right: auto;">
-											<div class="carousel-caption">Second Slide</div>
+											<div class="carousel-caption"></div>
 										</div>
 										<div class="item">
 											<img src="<c:url value="/img/3.jpg"/>" alt="Third slide"
 												style="margin-left: auto; margin-right: auto;">
-											<div class="carousel-caption">Third Slide</div>
+											<div class="carousel-caption"></div>
 										</div>
 									</div>
 									<a class="left carousel-control"
@@ -226,13 +225,15 @@
 										href="#carousel-example-generic" data-slide="next"> <span
 										class="fa fa-angle-right"></span>
 									</a>
+									
+								
 								</div>
 							</div>
 							<!-- /.box-body -->
 							<!-- /.table-responsive -->
 						</div>
 						<!-- /.box-body -->
-
+						</div>
 					</div>
 					
 					
@@ -276,20 +277,331 @@
 					
 					
 					<div class="box box-info">
-						<!-- /.box-header -->
+						
 						<div class="box-body">
-							<div class="box-body">
 								<div class="box-header with-border">
-									<h3 class="box-title">좌석현황</h3>
-									<div class="box-tools pull-right">
+								<h3 class="box-title">좌석상황</h3>
+									
+									
+									
+									
+									
+									
+									
+								<table class="seat_table">
+										<tr>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th_blink"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th_blink"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th_blink"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>										
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td></td>
+											<td class="red">67</td>
+											<td class="border_top"></td>
+											<td class="red">68</td>
+											<td class="red"><div>71 임수진</div></td>
+											<td class="border_top"></td>
+											<td class="red">72</td>
+											<td class="red">75</td>
+											<td class="border_top"></td>
+											<td class="red">76</td>
+											<td class="red">78</td>											
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td></td>
+											<td class="red">66</td>
+											<td></td>
+											<td class="red">69</td>
+											<td class="red">70</td>
+											<td></td>
+											<td class="red">73</td>
+											<td class="red">74</td>
+											<td></td>
+											<td class="red">77</td>
+											<td class="red">79</td>											
+										</tr>
+										<tr>
+											<td class="seat_blink"></td>
+											<td></td>
+											<td class="border_left"></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="border_right"></td>											
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td></td>
+											<td class="red">65</td>
+											<td class="border_bottom"></td>
+											<td class="border_bottom"></td>
+											<td></td>
+											<td></td>
+											<td class="red">89</td>
+											<td class="red">88</td>
+											<td></td>
+											<td class="red">85</td>
+											<td class="red">80</td>											
+										</tr>
+										<tr>
+											<td class="gray"><div>화장실</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="red">93</td>
+											<td></td>
+											<td class="red">90</td>
+											<td class="red">87</td>
+											<td></td>
+											<td class="red">84</td>
+											<td class="red">81</td>											
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="red">92</td>
+											<td class="border_bottom"></td>
+											<td class="red">91</td>
+											<td class="red">86</td>
+											<td class="border_bottom"></td>
+											<td class="red">83</td>
+											<td class="red">82</td>											
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td class="deapblue">21</td>
+											<td class="deapblue">22</td>
+											<td></td>
+											<td></td>
+											<td class="deapred">63</td>
+											<td></td>
+											<td class="deapred">62</td>
+											<td class="deapred">60</td>
+											<td></td>
+											<td class="deapred">58</td>
+											<td class="deapred">56</td>											
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td class="deapblue">19</td>
+											<td class="deapblue">20</td>
+											<td></td>
+											<td></td>
+											<td class="deapred">64</td>
+											<td></td>
+											<td class="deapred">61</td>
+											<td class="deapred">59</td>
+											<td></td>
+											<td class="deapred">57</td>
+											<td class="deapred">55</td>											
+										</tr>
+										<tr>
+											<td class="seat_blink"><div>&nbsp;</div></td>
+											<td class="border_left"></td>
+											<td class="border_right"></td>
+											<td></td>
+											<td></td>
+											<td class="border_left"></td>
+											<td ></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="border_right"></td>											
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td class="deapblue">17</td>
+											<td class="deapblue">18</td>
+											<td></td>
+											<td></td>
+											<td class="deapred">45</td>
+											<td></td>
+											<td class="deapred">48</td>
+											<td class="deapred">50</td>
+											<td></td>
+											<td class="deapred">52</td>
+											<td class="deapred">54</td>											
+										</tr>
+										<tr>
+											<td class="blue"><div>12</div></td>
+											<td class="blue">15</td>
+											<td class="blue">16</td>
+											<td></td>
+											<td></td>
+											<td class="deapred">46</td>
+											<td class="border_bottom"></td>
+											<td class="deapred">47</td>
+											<td class="deapred">49</td>
+											<td class="border_bottom"></td>
+											<td class="deapred">51</td>
+											<td class="deapred">53</td>											
+										</tr>
+										<tr>
+											<td class="blue"><div>11</div></td>
+											<td></td>
+											<td class="border_right"></td>
+											<td></td>
+											<td></td>
+											<td class="deapblue">44</td>
+											<td></td>
+											<td class="deapblue">42</td>
+											<td class="deapblue">40</td>
+											<td></td>
+											<td class="deapblue">38</td>
+											<td class="deapblue">36</td>											
+										</tr>
+										<tr>
+											<td class="blue"><div>10</div></td>
+											<td class="blue">13</td>
+											<td class="blue">14</td>
+											<td></td>
+											<td></td>
+											<td class="deapblue">43</td>
+											<td></td>
+											<td class="deapblue">41</td>
+											<td class="deapblue">39</td>
+											<td></td>
+											<td class="deapblue">37</td>
+											<td class="deapblue">35</td>											
+										</tr>
+										<tr>
+											<td class="blue"><div>9</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="border_left"></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="border_right"></td>											
+										</tr>
+										<tr>
+											<td class="blue"><div>8</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="deapblue">25</td>
+											<td></td>
+											<td class="deapblue">27</td>
+											<td class="deapblue">29</td>
+											<td></td>
+											<td class="deapblue">31</td>
+											<td class="deapblue">33</td>											
+										</tr>
+										<tr>
+											<td class="blue"><div>7</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="deapblue">26</td>
+											<td class="border_bottom"></td>
+											<td class="deapblue">28</td>
+											<td class="deapblue">30</td>
+											<td class="border_bottom"></td>
+											<td class="deapblue">32</td>
+											<td class="deapblue">34</td>											
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="pink">6</td>
+											<td class="pink">5</td>
+											<td></td>
+											<td class="pink">4</td>
+											<td class="pink">3</td>											
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="pink">2</td>											
+										</tr>
+										<tr>
+											<td class="gray"><div>출입구</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="pink">1</td>											
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="gray"><div>사무실</div></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="pink">99</td>											
+										</tr>
+									</table>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
 
-									</div>
 								</div>
-									<img src="<c:url value="/img/seat.jpg"/>" alt="First slide"
-												style="margin-left: auto; margin-right: auto;">
-							</div>
-							<!-- /.box-body -->
-							<!-- /.table-responsive -->
+								<!-- /.box-header -->
 						</div>
 						<!-- /.box-body -->
 
