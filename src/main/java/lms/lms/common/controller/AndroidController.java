@@ -30,10 +30,12 @@ public class AndroidController {
 			HttpServletRequest request) {
 
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
-		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
-
+		String userPhone = request.getParameter("userPhone");
+		System.out.println(userNo);
+		System.out.println(userPhone);
 		List<UserDetail> userDetail = userDetailService.sendSMS(userNo,
 				userPhone);
+		
 
 		Map<String, String> result = new HashMap<String, String>();
 
@@ -110,7 +112,7 @@ public class AndroidController {
 			HttpServletRequest request) {
 
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
-		int userPhone = Integer.parseInt(request.getParameter("userPhone"));
+		String userPhone = request.getParameter("userPhone");
 		String CheckInTime, CheckOutTime;
 
 

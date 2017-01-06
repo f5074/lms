@@ -142,7 +142,6 @@
 									<li class="dropdown"><a href="#" class="dropdown-toggle"
 										data-toggle="dropdown">${sid }</a>
 										<ul class="dropdown-menu" role="menu">
-											<li><a href="#">복습</a></li>
 											<li id="logout"><a>로그아웃</a></li>
 										</ul></li>
 									<!-- 회원가입 -->
@@ -185,8 +184,21 @@
 
 														<div class="pull-left">
 	
-															<div>회원검색 <a href="#" type="button" class="btn btn-danger btn-xs">검색</a></div>
+															<div>회원검색 <a href="/lms/user/userDetail" type="button" class="btn btn-danger btn-xs">검색</a></div>
 															<div><input type="text" class="form-control" name="#"></div>
+															<div>
+															
+<table>
+	<c:forEach var="userDetail" items="${userDetail }">
+	<tr>
+		<td><a href="/lms/user/userDetailView?userNo=${userDetail.userNo }&userPhone=${userDetail.userPhone}">${userDetail.userName }</a></td>
+		<td>${userDetail.userPhone }</td>
+
+	</tr>
+	</c:forEach>
+</table>
+															
+															</div>
 														</div>
 														<div class="clearfix visible-xs"></div>
 														<div class="media-body">

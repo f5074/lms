@@ -165,7 +165,6 @@
 										data-toggle="dropdown">${sid }</a>
 										<ul class="dropdown-menu" role="menu">
 											<li><a href="#">로그아웃</a></li>
-											<li><a href="#"></a></li>
 										</ul>
 									</li>
 									

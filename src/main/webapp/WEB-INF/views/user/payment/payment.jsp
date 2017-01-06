@@ -141,7 +141,6 @@
 									<li class="dropdown"><a href="#" class="dropdown-toggle"
 										data-toggle="dropdown">${sid }</a>
 										<ul class="dropdown-menu" role="menu">
-											<li><a href="#">복습</a></li>
 											<li id="logout"><a>로그아웃</a></li>
 										</ul></li>
 									<!-- 회원가입 -->

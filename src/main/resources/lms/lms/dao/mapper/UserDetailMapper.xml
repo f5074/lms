@@ -14,20 +14,30 @@
 	</resultMap>
 	<select id="userDetailList" parameterType="lms.lms.common.domain.UserDetail" resultMap="userDetailMap">
 		SELECT *
-		FROM users_detail 
+		FROM user_detail 
 		ORDER BY user_no
 	</select>
 	<!-- 안드로이드에서 받은 전화번호로 유저정보받아오기 -->
 	<select id="sendSMS" parameterType="map" resultMap="userDetailMap">
 		SELECT *
-		FROM users_detail
-		WHERE user_phone LIKE '%'||#{userPhone}||'%'
+		FROM user_detail
+		WHERE user_phone LIKE CONCAT('%',#{userPhone})
+		<!-- WHERE user_phone LIKE CONCAT('%',#{userPhone},'%') -->
 	</select>
 		<select id="userDetailView" parameterType="lms.lms.common.domain.UserDetail" resultMap="userDetailMap">
 		SELECT *
-		FROM users_detail
+		FROM user_detail
 		WHERE user_no = #{userNo}
 	</select>
+	
+	<insert id="userDetailInsert" parameterType="lms.lms.common.domain.UserDetail">
+	
+		INSERT INTO user_detail(user_id , user_name, user_phone, user_school, user_grade, user_address, user_parent_phone)
+		VALUES(#{userId}, #{userName}, #{userPhone}, #{userSchool}, #{userGrade},#{userAddress}, #{userParentPhone});
+
+	
+	
+	</insert>
 	
 		
 </mapper>

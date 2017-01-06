@@ -18,14 +18,26 @@ public class UserDetailDaoImpl implements UserDetailDao{
 		return userDetailMapper.userDetailList();
 	}
 
+
+
 	@Override
-	public List<UserDetail> sendSMS(int userNo, int userPhone) {
+	public int userDetailInsert(UserDetail userDetail) {
+		// TODO Auto-generated method stub
+		return userDetailMapper.userDetailInsert(userDetail);
+	}
+
+
+
+	@Override
+	public List<UserDetail> sendSMS(int userNo, String userPhone) {
 		// TODO Auto-generated method stub
 		return userDetailMapper.sendSMS(userNo, userPhone);
 	}
 
+
+
 	@Override
-	public List<UserDetail> userDetailView(int userNo, int userPhone) {
+	public List<UserDetail> userDetailView(int userNo, String userPhone) {
 		// TODO Auto-generated method stub
 		return userDetailMapper.userDetailView(userNo, userPhone);
 	}

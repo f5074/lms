@@ -18,14 +18,26 @@ public class UserDetailServiceImpl implements UserDetailService{
 		return userDetailDao.userDetailList();
 	}
 
+
+
 	@Override
-	public List<UserDetail> sendSMS(int userNo, int userPhone) {
+	public int userDetailInsert(UserDetail userDetail) {
+		// TODO Auto-generated method stub
+		return userDetailDao.userDetailInsert(userDetail);
+	}
+
+
+
+	@Override
+	public List<UserDetail> sendSMS(int userNo, String userPhone) {
 		// TODO Auto-generated method stub
 		return userDetailDao.sendSMS(userNo, userPhone);
 	}
 
+
+
 	@Override
-	public List<UserDetail> userDetailView(int userNo, int userPhone) {
+	public List<UserDetail> userDetailView(int userNo, String userPhone) {
 		// TODO Auto-generated method stub
 		return userDetailDao.userDetailView(userNo, userPhone);
 	}
