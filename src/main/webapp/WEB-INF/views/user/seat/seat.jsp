@@ -20,6 +20,8 @@
 <link rel="stylesheet" href="<c:url value="/css/_all-skins.min.css"/>">
 <link rel="stylesheet" href="<c:url value="/css/user/seat_table.css"/>">
 
+
+
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
@@ -173,25 +175,39 @@
 									
 									<table class="seat_table">
 										<tr>
-											<td></td>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th_blink"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th_blink"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th_blink"></th>
+											<th class="seat_th"></th>
+											<th class="seat_th"></th>										
+										</tr>
+										<tr>
+											<td><div>&nbsp;</div></td>
 											<td></td>
 											<td class="red">67</td>
 											<td class="border_top"></td>
-											<td class="red">66</td>
-											<td class="red">71</td>
+											<td class="red">68</td>
+											<td class="red"><div>71 임수진</div></td>
 											<td class="border_top"></td>
 											<td class="red">72</td>
 											<td class="red">75</td>
 											<td class="border_top"></td>
 											<td class="red">76</td>
 											<td class="red">78</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td></td>
+											<td><div>&nbsp;</div></td>
 											<td></td>
 											<td class="red">66</td>
 											<td></td>
-											<td class="red">67</td>
+											<td class="red">69</td>
 											<td class="red">70</td>
 											<td></td>
 											<td class="red">73</td>
@@ -199,7 +215,7 @@
 											<td></td>
 											<td class="red">77</td>
 											<td class="red">79</td>											
-										<tr>
+										</tr>
 										<tr>
 											<td class="seat_blink"></td>
 											<td></td>
@@ -213,9 +229,9 @@
 											<td></td>
 											<td></td>
 											<td class="border_right"></td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="gray">화</td>
+											<td><div>&nbsp;</div></td>
 											<td></td>
 											<td class="red">65</td>
 											<td class="border_bottom"></td>
@@ -227,9 +243,9 @@
 											<td></td>
 											<td class="red">85</td>
 											<td class="red">80</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="gray">장</td>
+											<td class="gray"><div>화장실</div></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -241,9 +257,9 @@
 											<td></td>
 											<td class="red">84</td>
 											<td class="red">81</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="gray">실</td>
+											<td><div>&nbsp;</div></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -255,9 +271,9 @@
 											<td class="border_bottom"></td>
 											<td class="red">83</td>
 											<td class="red">82</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td></td>
+											<td><div>&nbsp;</div></td>
 											<td class="deapblue">21</td>
 											<td class="deapblue">22</td>
 											<td></td>
@@ -269,9 +285,9 @@
 											<td></td>
 											<td class="deapred">58</td>
 											<td class="deapred">56</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td></td>
+											<td><div>&nbsp;</div></td>
 											<td class="deapblue">19</td>
 											<td class="deapblue">20</td>
 											<td></td>
@@ -283,9 +299,9 @@
 											<td></td>
 											<td class="deapred">57</td>
 											<td class="deapred">55</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="seat_blink"></td>
+											<td class="seat_blink"><div>&nbsp;</div></td>
 											<td class="border_left"></td>
 											<td class="border_right"></td>
 											<td></td>
@@ -297,9 +313,9 @@
 											<td></td>
 											<td></td>
 											<td class="border_right"></td>											
+										</tr>
 										<tr>
-										<tr>
-											<td></td>
+											<td><div>&nbsp;</div></td>
 											<td class="deapblue">17</td>
 											<td class="deapblue">18</td>
 											<td></td>
@@ -311,9 +327,9 @@
 											<td></td>
 											<td class="deapred">52</td>
 											<td class="deapred">54</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="blue">12</td>
+											<td class="blue"><div>12</div></td>
 											<td class="blue">15</td>
 											<td class="blue">16</td>
 											<td></td>
@@ -325,9 +341,9 @@
 											<td class="border_bottom"></td>
 											<td class="deapred">51</td>
 											<td class="deapred">53</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="blue">11</td>
+											<td class="blue"><div>11</div></td>
 											<td></td>
 											<td class="border_right"></td>
 											<td></td>
@@ -339,9 +355,9 @@
 											<td></td>
 											<td class="deapblue">38</td>
 											<td class="deapblue">36</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="blue">10</td>
+											<td class="blue"><div>10</div></td>
 											<td class="blue">13</td>
 											<td class="blue">14</td>
 											<td></td>
@@ -353,9 +369,9 @@
 											<td></td>
 											<td class="deapblue">37</td>
 											<td class="deapblue">35</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="blue">9</td>
+											<td class="blue"><div>9</div></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -367,9 +383,9 @@
 											<td></td>
 											<td></td>
 											<td class="border_right"></td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="blue">8</td>
+											<td class="blue"><div>8</div></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -381,9 +397,9 @@
 											<td></td>
 											<td class="deapblue">31</td>
 											<td class="deapblue">33</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="blue">7</td>
+											<td class="blue"><div>7</div></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -395,9 +411,9 @@
 											<td class="border_bottom"></td>
 											<td class="deapblue">32</td>
 											<td class="deapblue">34</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td></td>
+											<td><div>&nbsp;</div></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -409,9 +425,9 @@
 											<td></td>
 											<td class="pink">4</td>
 											<td class="pink">3</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="gray">출</td>
+											<td><div>&nbsp;</div></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -423,9 +439,9 @@
 											<td></td>
 											<td></td>
 											<td class="pink">2</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="gray">입</td>
+											<td class="gray"><div>출입구</div></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -437,21 +453,21 @@
 											<td></td>
 											<td></td>
 											<td class="pink">1</td>											
+										</tr>
 										<tr>
-										<tr>
-											<td class="gray">구</td>
+											<td><div>&nbsp;</div></td>
 											<td></td>
 											<td></td>
-											<td class="gray">사</td>
-											<td class="gray">무</td>
-											<td class="gray">실</td>
+											<td></td>
+											<td class="gray"><div>사무실</div></td>
+											<td></td>
 											<td></td>
 											<td></td>
 											<td></td>
 											<td></td>
 											<td></td>
 											<td class="pink">99</td>											
-										<tr>
+										</tr>
 									</table>
 									
 									

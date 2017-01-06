@@ -1,5 +1,8 @@
+
 .seat_table{
-	width: 70%;
+	width: 700px;
+	font-size: 10pt;
+	text-align:center;
 }
 .seat_blink{
 	width: 15px;
@@ -9,6 +12,7 @@
 	width: 15px;
 	height: 20px;
 	border-top:solid black 1px;
+	
 }
 .border_left{
 	width: 15px;
@@ -26,43 +30,55 @@
 	height: 20px;
 	border-bottom:solid black 1px;
 }
-
+.seat_th{
+	width: 60px;
+}
+.seat_th_blink{
+	width:15px;
+}
 
 .gray {
 	background-color: #aaaaaa;
-	text-align: center;
 	border:solid black 1px;
-
+	width: 60px;
 }
 
 .pink {
 	background-color: #FFD8D8;
-	text-align: center;
 	border:solid black 1px;
+	width: 60px;
 
 }
 
 .blue {
 	background-color: #B2CCFF;
-	text-align: center;
 	border:solid black 1px;
+	width: 60px;
 }
 
 
 .deapblue {
 	background-color: #6799FF;
-	text-align: center;
 	border:solid black 1px;
+	width: 60px;
 }
 
 .red {
 	background-color: #FAE0D4;
-	text-align: center;
 	border:solid black 1px;
+	width: 60px;
+	
 }
 
 .deapred {
 	background-color: #FFC19E;
-	text-align: center;
 	border:solid black 1px;
+	width: 60px;
+}
+.seat_td_div{
+	font-size: 8pt;
+}
+
+.deapred:HOVER ,.red:HOVER, .blue:HOVER, .deapblue:HOVER, .pink:HOVER {
+	background-color: red;
 }
