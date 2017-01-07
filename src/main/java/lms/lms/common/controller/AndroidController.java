@@ -59,11 +59,11 @@ public class AndroidController {
 		/* int userPhone = Integer.parseInt(request.getParameter("userPhone")); */
 
 		//오늘 입실 여부를 확인 하고 오늘 입실여부가 없을 경우 입실을 시킴
-		List<Attendance> checkInTime = attendanceService.checkInTime2(userNo);
+		List<Attendance> checkInTime2 = attendanceService.checkInTime2(userNo);
 		Map<String, String> result = new HashMap<String, String>();
-		System.out.println("오늘입실여부:"+checkInTime.isEmpty());
+		System.out.println("체크인시간비어있는지여부:"+checkInTime2.isEmpty());
 		
-		boolean a = checkInTime.isEmpty();
+		boolean a = checkInTime2.isEmpty();
 		
 		if(a == true){
 			// 입실 입력 후 입실시간 입력
@@ -98,11 +98,11 @@ public class AndroidController {
 		/* int userPhone = Integer.parseInt(request.getParameter("userPhone")); */
 
 		//오늘 퇴실 여부를 확인 하고 오늘 퇴실여부가 없을 경우 퇴실을 시킴
-		List<Attendance> checkOutTime = attendanceService.checkOutTime2(userNo);
+		List<Attendance> checkOutTime2 = attendanceService.checkOutTime2(userNo);
 		Map<String, String> result = new HashMap<String, String>();
-		System.out.println("오늘퇴실여부:"+checkOutTime.isEmpty());
+		System.out.println("체크아웃시간비어있는지여부:"+checkOutTime2.isEmpty());
 		
-		boolean a = checkOutTime.isEmpty();
+		boolean a = checkOutTime2.isEmpty();
 		
 		if(a == true){
 		// 퇴실 입력 후 퇴실시간 입력
@@ -172,7 +172,7 @@ public class AndroidController {
 			
 			if(b==true){
 				
-				userNo = 4;
+				userNo = 0;
 				CheckOutTime = "스레드멈춤방지";
 				
 			} else{
@@ -184,6 +184,16 @@ public class AndroidController {
 			}
 				List<UserDetail> userDetailList = userDetailService.userDetailView(
 						userNo, userPhone);
+				
+				// 데이터가 없는 경우  null값을 보냄
+				boolean c = userDetailList.isEmpty();
+				
+				if(c == true){
+					result.put("data1","null");
+
+					result.put("data2", "null");
+					
+				}else{
 			
 				result.put("data1",
 						String.valueOf(userDetailList.get(0).getUserParentPhone()));
@@ -193,7 +203,8 @@ public class AndroidController {
 						+ CheckOutTime + "에 퇴실하였습니다.");
 
 				// 퇴실문자체크가 0일때 1로 변경
-				attendanceService.checkOutSMS(userNo);				
+				attendanceService.checkOutSMS(userNo);
+				}
 
 		}
 

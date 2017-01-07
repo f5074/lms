@@ -44,7 +44,7 @@
 	<select id="checkInSMS2" parameterType="map" resultMap="attendanceMap">
 		SELECT *
 		FROM attendance
-		WHERE checkin_sms = 0 AND month(checkout_time) = month(sysdate()) AND dayofmonth(checkout_time) = dayofmonth(sysdate())
+		WHERE checkin_sms = 0 AND month(checkin_time) = month(sysdate()) AND dayofmonth(checkin_time) = dayofmonth(sysdate())
 	</select>
 	
 	<insert id="checkOutTime" parameterType="int">
