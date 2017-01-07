@@ -58,20 +58,32 @@ public class AndroidController {
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
 		/* int userPhone = Integer.parseInt(request.getParameter("userPhone")); */
 
-		// 입실 입력 후 입실시간 입력
-		attendanceService.checkInTime(userNo);
-
-		// 입실한 정보 가져오기
-		List<Attendance> checkInSMS2 = attendanceService.checkInSMS2(userNo);
-
+		//오늘 입실 여부를 확인 하고 오늘 입실여부가 없을 경우 입실을 시킴
+		List<Attendance> checkInTime = attendanceService.checkInTime2(userNo);
 		Map<String, String> result = new HashMap<String, String>();
+		System.out.println("오늘입실여부:"+checkInTime.isEmpty());
+		
+		boolean a = checkInTime.isEmpty();
+		
+		if(a == true){
+			// 입실 입력 후 입실시간 입력
+			attendanceService.checkInTime(userNo);
 
-		for (int i = 0; i < checkInSMS2.size(); i++) {
-			System.out.println(i + " : " + checkInSMS2.get(i).getUserNo());
+			// 입실한 정보 가져오기
+			List<Attendance> checkInSMS2 = attendanceService.checkInSMS2(userNo);
+
+			for (int i = 0; i < checkInSMS2.size(); i++) {
+				System.out.println(i + " : " + checkInSMS2.get(i).getUserNo());
+			}
+
+			result.put("data1", String.valueOf(checkInSMS2.get(0).getUserNo()));
+			result.put("data2", checkInSMS2.get(0).getCheckInSMS());
+			
+		} else{
+			result.put("data1", "null");
+			result.put("data2", "null");			
 		}
-
-		result.put("data1", String.valueOf(checkInSMS2.get(0).getUserNo()));
-		result.put("data2", checkInSMS2.get(0).getCheckInSMS());
+		
 
 		return result;
 	}
@@ -85,13 +97,19 @@ public class AndroidController {
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
 		/* int userPhone = Integer.parseInt(request.getParameter("userPhone")); */
 
+		//오늘 퇴실 여부를 확인 하고 오늘 퇴실여부가 없을 경우 퇴실을 시킴
+		List<Attendance> checkOutTime = attendanceService.checkOutTime2(userNo);
+		Map<String, String> result = new HashMap<String, String>();
+		System.out.println("오늘퇴실여부:"+checkOutTime.isEmpty());
+		
+		boolean a = checkOutTime.isEmpty();
+		
+		if(a == true){
 		// 퇴실 입력 후 퇴실시간 입력
 		attendanceService.checkOutTime(userNo);
 
 		// 퇴실한 정보 가져오기
 		List<Attendance> checkOutSMS2 = attendanceService.checkOutSMS2(userNo);
-
-		Map<String, String> result = new HashMap<String, String>();
 
 		for (int i = 0; i < checkOutSMS2.size(); i++) {
 			System.out.println(i + " : " + checkOutSMS2.get(i).getUserNo());
@@ -99,6 +117,10 @@ public class AndroidController {
 
 		result.put("data1", String.valueOf(checkOutSMS2.get(0).getUserNo()));
 		result.put("data2", checkOutSMS2.get(0).getCheckOutSMS());
+		} else{
+			result.put("data1", "null");
+			result.put("data2", "null");
+		}
 
 		return result;
 	}
