@@ -14,5 +14,9 @@
 	<select id="paymentList" parameterType="lms.lms.common.domain.Payment" resultMap="paymentMap">
 		SELECT *
 		FROM payment ORDER BY payment_no
-	</select>	
+	</select>
+	<insert id="paymentInsert"  parameterType="lms.lms.common.domain.Payment">	
+		INSERT INTO payment(user_no, seat_no, payment_start, payment_end, payment_cost, payment_plan, payment_memo)
+		VALUES(#{userNo}, #{seatNo}, #{paymentStart}, #{paymentEnd}, #{paymentCost},#{paymentPlan}, #{paymentMemo});
+	</insert>
 </mapper>

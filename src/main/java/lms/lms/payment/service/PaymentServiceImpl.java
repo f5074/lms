@@ -18,4 +18,10 @@ public class PaymentServiceImpl implements PaymentService{
 		return paymentDao.paymentList();
 	}
 
+	@Override
+	public int paymentInsert(Payment payment) {
+		// TODO Auto-generated method stub
+		return paymentDao.paymentInsert(payment);
+	}
+
 }

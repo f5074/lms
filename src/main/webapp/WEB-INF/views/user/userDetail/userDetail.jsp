@@ -171,10 +171,7 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="the-box">
-										<form method="POST" action="#" accept-charset="UTF-8" class="form-horizontal" id="addForm">
-											<input name="_token" type="hidden"
-												value="sLNs1goRacLky1uDTFebUMuZ8gdyTSSOeYSMxYv0"> <input
-												name="profile_filename" type="hidden" value="">
+										<form method="POST"  accept-charset="UTF-8" class="form-horizontal" id="userAdd">
 
 											<fieldset>
 												<legend>회원정보</legend>
@@ -204,11 +201,10 @@
 														<div class="media-body">
 
 															
-															
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">이름</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control" placeholder="필수 입력" name="#" >
+																			<input type="text" class="form-control" placeholder="필수 입력" name="userName" id="userName" required>
 																		</div>
 																	</div>
 <!-- 																	<div class="form-group">
@@ -221,32 +217,32 @@
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">연락처_학생</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control" placeholder="필수 입력" name="#">
+																			<input type="text" class="form-control" onchange="phoneNumberCheck(this)" placeholder="ex) 010-1212-2323" name="userPhone" id="userPhone" required>
 																		</div>
 																	</div>
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">학교명(소속)</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control" name="#">
+																			<input type="text" class="form-control" name="userSchool" id="userSchool">
 																		</div>
 																	</div>																	
 
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">학년</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control" name="#">
+																			<input type="text" class="form-control" name="userGrade" id="userGrade">
 																		</div>
 																	</div>
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">주소</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control" name="#" size="50">
+																			<input type="text" class="form-control" name="userAddress" id="userAddress" >
 																		</div>
 																	</div>
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">연락처_부모</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control" placeholder="필수 입력" name="#">
+																			<input type="text" class="form-control" onchange="phoneNumberCheck(this)" placeholder="ex) 010-1212-2323" name="userParentPhone" id="userParentPhone" required>
 																		</div>
 																	</div>
 																	
@@ -256,7 +252,7 @@
 																		</label>
 																		<div class="col-sm-8">
 																			<div class="onoffswitch">
-																				<input type="checkbox" class="onoffswitch-checkbox" name="option1" value="Y" id="switch-1" checked="">
+																				<input type="checkbox" class="onoffswitch-checkbox" name="#" value="Y" id="switch-1" checked="">
 																				<label class="onoffswitch-label" for="switch-1" style="height: 20px"> 
 																					<span class="onoffswitch-inner"></span>
 																					<span class="onoffswitch-switch" style="background: #CCCCCC;"></span>
@@ -268,8 +264,8 @@
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">좌석번호</label>
 																		<div class="col-sm-8">
-																			<select class="form-control" name="#">
-																				<option value="0">선택</option>
+																			<select class="form-control" name="seatNo" id="seatNo" ondragleave="seatNoCheck()" required>
+																				<option value="">선택</option>
 																				<option value="1">1</option>
 																				<option value="2">2</option>
 																				<option value="3">3</option>
@@ -279,35 +275,35 @@
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">등록시작일</label>
 																		<div class="col-sm-8">
-																			<input type="date" class="form-control" name="#">
+																			<input type="date" class="form-control" name="paymentStart" id="paymentStart" required>
 																		</div>
 																	</div>
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">등록종료일</label>
 																		<div class="col-sm-8">
-																			<input type="date" class="form-control" name="#">
+																			<input type="date" class="form-control" name="paymentEnd" id="paymentEnd" required>
 																		</div>
 																	</div>
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">이용요금</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control" name="#">
+																			<input type="text" class="form-control" onchange="paymentCostCheck(this)" name="paymentCost" id="paymentCost" required>
 																		</div>
 																	</div>
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">결제방식</label>
 																		<div class="col-sm-8">
-																			<input type="text" class="form-control" name="#">
+																			<input type="text" class="form-control" name="paymentPlan" id="paymentPlan" required>
 																		</div>
 																	</div>
 
 																	<div class="form-group">
 																		<label class="col-sm-4 control-label">메모</label>
 																		<div class="col-sm-8">
-																			<textarea class="form-control" rows="4" name="#"></textarea>
+																			<textarea class="form-control" rows="4" name="paymentMemo" id="paymentMemo"></textarea>
 																		</div>
 																	</div>
-																	
+
 																	
 
 <!-- 																<div class="form-group">
@@ -328,12 +324,13 @@
 
 
 											</fieldset>
-										</form>
-
 										<div class="the-box text-center clear">
 											<a class="btn btn-primary btn-lg" href="/lms/"><i class="fa fa-reply"></i> 뒤로가기</a>
-											<button class="btn btn-danger btn-lg" id="addBtn"><i class="fa fa-plus"></i> 등록하기 </button>
+											<button class="btn btn-danger btn-lg" id="#" type="submit"><i class="fa fa-plus"></i> 등록하기 </button>
 										</div>
+										</form>
+
+
 
 									</div>
 								</div>
@@ -380,3 +377,111 @@
 	<script src="<c:url value="/js/app.min.js"/>"></script>
 	<!-- AdminLTE for demo purposes -->
 	<script src="<c:url value="/js/demo.js"/>"></script>
+	
+	<!-- sid값 저장 -->
+	<script type="text/javascript">	var sid = "${sid}"</script>
+	
+<script>
+$(document).ready(function(){
+	$('#userAdd').submit(function(e) {
+		e.preventDefault();
+		
+		var userName = $("#userName").val();
+		var userPhone = $("#userPhone").val();
+		var userSchool = $("#userSchool").val();
+		var userGrade = $("#userGrade").val();
+		var userAddress = $("#userAddress").val();
+		var userParentPhone = $("#userParentPhone").val();
+		var seatNo = $("#seatNo :selected").val();
+		var paymentStart = $("#paymentStart").val();
+		var paymentEnd = $("#paymentEnd").val();
+		var paymentCost = $("#paymentCost").val();
+		var paymentPlan = $("#paymentPlan").val();
+		var paymentMemo = $("#paymentMemo").val();
+		
+		alert(seatNo);
+		
+		if(		userName.length != 0 
+				&& userPhone.length != 0 
+				&& userParentPhone.length != 0 
+				&& paymentStart.length != 0
+				&& seatNo.length != 0
+				&& paymentEnd.length != 0
+				&& paymentCost.length != 0
+				&& paymentPlan.length != 0 ){		
+			$.ajax({
+				url : "/lms/user/userDetail/userDetailInsert",
+				method: "POST",
+				data: {
+					userId: sid,
+					userName: userName,
+					userPhone: userPhone,
+					userSchool: userSchool,
+					userGrade: userGrade,
+					userAddress: userAddress,
+					userParentPhone: userParentPhone,
+					seatNo: seatNo,
+					paymentStart: paymentStart,
+					paymentEnd: paymentEnd,
+					paymentCost: paymentCost,
+					paymentPlan: paymentPlan,
+					paymentMemo: paymentMemo
+				}
+			}).done(function(result){
+				if(result>0){
+					$("#modalContent").html("등록 성공");
+					$("#modal").modal("show");
+					document.location.href="/lms/index";
+
+				} else{
+					$("#modalContent").html("등록 실패");
+					$("#modal").modal("show");
+					document.location.href="/lms/index";
+				}
+			})
+		
+		} else if(seatNo.length == 0){
+				$("#modalContent").html("좌석번호를 선택해주세요.");
+				$("#modal").modal("show");
+			
+		}
+	})
+})
+
+
+
+function phoneNumberCheck(phone){
+	var phonePattern=/^[0-9]{3}-[0-9]{3,4}-[0-9]{4}$/;
+  	if(!phonePattern.test(phone.value)){
+		$("#modalContent").html("형식 : 010-123-1234, 010-1234-1234");
+		$("#modal").modal("show");
+		phone.value="";
+
+	} else {
+    
+ 	}
+};
+
+
+function paymentCostCheck(cost){
+	var paymentPattern=/^[0-9]*$/;
+  	if(!paymentPattern.test(cost.value)){
+		$("#modalContent").html("이용요금은 숫자만 입력해주세요.");
+		$("#modal").modal("show");
+		cost.value="";
+	} else {
+    
+ 	}
+}; 
+function seatNoCheck(){
+	var seatNo = $("#seatNo :selected").val();
+	alert(seatNo);
+	
+}
+
+
+</script>	
+	
+	
+	
+	

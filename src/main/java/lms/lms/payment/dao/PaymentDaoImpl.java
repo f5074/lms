@@ -18,5 +18,11 @@ public class PaymentDaoImpl implements PaymentDao{
 		return paymentMapper.paymentList();
 	}
 
+	@Override
+	public int paymentInsert(Payment payment) {
+		// TODO Auto-generated method stub
+		return paymentMapper.paymentInsert(payment);
+	}
+
 
 }

@@ -42,4 +42,12 @@ public class UserDetailDaoImpl implements UserDetailDao{
 		return userDetailMapper.userDetailView(userNo, userPhone);
 	}
 
+
+
+	@Override
+	public List<UserDetail> userDetailView2(String userName, String userPhone) {
+		// TODO Auto-generated method stub
+		return userDetailMapper.userDetailView2(userName, userPhone);
+	}
+
 }
