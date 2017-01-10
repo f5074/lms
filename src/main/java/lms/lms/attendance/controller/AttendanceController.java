@@ -17,11 +17,11 @@ public class AttendanceController {
 	@Autowired private AttendanceService attendanceService;
 	
 	//출석 목록보기
-	@RequestMapping("/user/attendance")
+	@RequestMapping("/user/attendance/attendanceView")
 	public String attendance(Model model){
 		List<Attendance> attendance = attendanceService.attendanceList();
 		model.addAttribute("attendance",attendance);
-		return "/user/attendance/attendance";
+		return "/user/attendance/attendanceView";
 	}
 	
 	//입실 시 입실 시간 추가 

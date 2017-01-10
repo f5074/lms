@@ -97,42 +97,27 @@
 								data-toggle="dropdown">좌석관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="/lms/user/seat/seat">좌석이동</a></li>
-									<li><a href="#">-</a></li>
-									<li><a href="#">-</a></li>
-
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">회원관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="/lms/user/userDetail/userDetail">회원등록</a></li>
-									<li><a href="#">회원정보</a></li>
-									<li><a href="/lms/userDetail/userDetailModify">회원수정</a></li>
+									<li><a href="/lms/user/userDetail/userDetailView">회원목록</a></li>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">결제관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/lms/user/payment/payment">결제등록</a></li>
-									<li><a href="#">-</a></li>
-									<li><a href="#">-</a></li>
+									<li><a href="/lms/user/payment/paymentView">결제목록</a></li>	
 								</ul>
 							</li>
 
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown">예약관리 <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">-</a>
-									<li><a href="#">-</a>
-									<li><a href="#">-</a>
-								</ul>
-							</li>
-							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">출결관리 <span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">-</a>
-									<li><a href="#">-</a>
-									<li><a href="#">-</a>
+									<li><a href="/lms/user/attendance/attendanceView">출결목록</a>
+
 								</ul>
 							</li>
 

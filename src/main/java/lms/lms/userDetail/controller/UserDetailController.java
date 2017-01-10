@@ -39,12 +39,12 @@ public class UserDetailController {
 		return "/user/userDetail/userDetail";
 	}
 	
-	@RequestMapping("/user/userDetailView")
-	public String userDetailView(Model model, int userNo, String userPhone){
+	@RequestMapping("/user/userDetail/userDetailView")
+	public String userDetailView(Model model){
 		
-		List<UserDetail> userDetail = userDetailService.userDetailView(userNo, userPhone);
+		List<UserDetail> userDetail = userDetailService.userDetailList();
 		model.addAttribute("userDetail",userDetail);
-		return "/user/userDetail/userDetail";
+		return "/user/userDetail/userDetailView";
 	}
 	
 	@RequestMapping("/user/userDetail/userDetail")

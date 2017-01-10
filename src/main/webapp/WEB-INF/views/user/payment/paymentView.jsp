@@ -82,45 +82,29 @@
 								data-toggle="dropdown">좌석관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="/lms/user/seat/seat">좌석이동</a></li>
-									<li><a href="#">-</a></li>
-									<li><a href="#">-</a></li>
-
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">회원관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="/lms/user/userDetail/userDetail">회원등록</a></li>
-									<li><a href="#">-</a></li>
-									<li><a href="#">-</a></li>
+									<li><a href="/lms/user/userDetail/userDetailView">회원목록</a></li>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">결제관리<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/lms/user/payment/payment">결제등록</a></li>
-									<li><a href="#">-</a></li>
-									<li><a href="#">-</a></li>
+									<li><a href="/lms/user/payment/paymentView">결제목록</a></li>	
 								</ul>
 							</li>
 
-							<li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown">예약관리 <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">-</a>
-									<li><a href="#">-</a>
-									<li><a href="#">-</a>
-								</ul>
-							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">출결관리 <span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">-</a>
-									<li><a href="#">-</a>
-									<li><a href="#">-</a>
+									<li><a href="/lms/user/attendance/attendanceView">출결목록</a>
+
 								</ul>
 							</li>
-
 								<c:if test="${sid=='admin' }">
 									<li><a href="#">관리자페이지</a></li>
 								</c:if>
@@ -160,57 +144,55 @@
 				<!-- Content Header (Page header) -->
 				<section class="content-header"></section>
 
+
 				<!-- Main content -->
 				<section class="content">
-					<!-- 이미지 슬라이드 -->
+					
 					<div class="box box-info">
-						<!-- /.box-header -->
 						<div class="box-body">
-							<div class="box-body">
-								
-								<h4>결제등록</h4><hr>
+								<div class="box-header with-border">
+									<h3 class="box-title">결제목록</h3>
+								</div>
 
-								<table>
-									<tr>
-										<td>성명 </td>
-										<td><input type="text" name="" size="20"   placeholder="" size="15"></td>							
-									</tr>
 
-									<tr>
-										<td>시작일</td>
-										<td><input type="date" name="birth"></td>							
-									</tr>
-									<tr>
-										<td>종료일</td>
-										<td><input type="date" name="birth"></td>							
-									</tr>
+<table class='table no-margin'>
+	<tr>
+		<th></th>
+		<th>회원이름</th>
+		<th>좌석번호</th>	
+		<th>시작일</th>	
+		<th>종료일</th>	
+		<th>이용요금</th>	
+		<th>결제방식</th>	
+		<th>메모</th>	
+	</tr>
 
-									<tr>
-										<td>이용요금 </td>
-										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
-									</tr>
-									<tr>
-										<td>결제방식</td>
-										<td>	<input type="text" name="" size="20"   placeholder="" size="15"></td>							
-									</tr>
-									<tr>
-										<td>결제메모</td>
-										<td>	<input type="text" name=""    placeholder="" size="15"></td>							
-									</tr>			
 
-								</table>
-									<input type="button" value="등록"><input type="button" value="취소"> 
-								
-								
-							</div>
-							<!-- /.box-body -->
-							<!-- /.table-responsive -->
+	
+	<c:forEach var="payment" items="${payment }">
+	<tr><td></td>
+		<td>${payment.userNo }</td>
+		<td>${payment.seatNo }</td>
+		<td>${payment.paymentStart }</td>
+		<td>${payment.paymentEnd }</td>
+		<td>${payment.paymentCost }</td>
+		<td>${payment.paymentPlan }</td>
+		<td>${payment.paymentMemo }</td>
+	</tr>
+	</c:forEach>
+</table>
+
+
+
+
+
+
+
+
+
+
 						</div>
-						<!-- /.box-body -->
-
 					</div>
-
-
 
 				</section>
 				<!-- /.content -->
