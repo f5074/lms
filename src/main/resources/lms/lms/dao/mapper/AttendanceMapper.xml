@@ -78,7 +78,6 @@
 		SELECT *
 		FROM attendance
 		WHERE checkout_sms = 0 AND month(checkout_time) = month(sysdate()) AND dayofmonth(checkout_time) = dayofmonth(sysdate())
-	
 	</select>
 	
 </mapper>

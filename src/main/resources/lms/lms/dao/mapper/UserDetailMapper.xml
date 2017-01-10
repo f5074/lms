@@ -29,10 +29,17 @@
 		FROM user_detail
 		WHERE user_no = #{userNo}
 	</select>
-		<select id="userDetailView2" parameterType="map" resultMap="userDetailMap">
+	<select id="userDetailView2" parameterType="map" resultMap="userDetailMap">
 		SELECT *
 		FROM user_detail
 		WHERE user_name LIKE CONCAT('%', #{userName},'%')
+	</select>
+	
+	<select id="userNoSearch" parameterType="map" resultType="int">
+		SELECT user_no
+		FROM user_detail
+		WHERE user_name = #{userName} AND user_phone=#{userPhone}
+	
 	</select>
 	
 	<insert id="userDetailInsert" parameterType="lms.lms.common.domain.UserDetail">	

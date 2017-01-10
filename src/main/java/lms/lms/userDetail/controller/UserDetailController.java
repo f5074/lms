@@ -1,6 +1,9 @@
 package lms.lms.userDetail.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import lms.lms.common.domain.Payment;
 import lms.lms.common.domain.UserDetail;
@@ -20,9 +23,17 @@ public class UserDetailController {
 	@Autowired private PaymentService paymentService;
 		
 	@RequestMapping("/user/userDetail")
-	public String userDetail(Model model, String userName, String userPhone ){
-		userName ="";
+	public String userDetail(HttpServletRequest request,  Model model, String userName, String userPhone, String userSearch ){
+			try {
+				userName = request.getParameter("userSearch");			
+				userName = new String(userName.getBytes("8859_1"), "utf-8");
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
 		System.out.println(userName);
+		
 		List<UserDetail> userDetail = userDetailService.userDetailView2(userName,userPhone);
 		model.addAttribute("userDetail",userDetail);
 		return "/user/userDetail/userDetail";
@@ -45,8 +56,16 @@ public class UserDetailController {
 	@RequestMapping(value="/user/userDetail/userDetailInsert", method=RequestMethod.POST)
 	@ResponseBody
 	public int userDetailInsert(Model model, UserDetail userDetail, Payment payment){
+		
+			String userName = userDetail.getUserName();
+			String userPhone = userDetail.getUserPhone();
 			//유저데이터 입력
 			int userDetailInsert = userDetailService.userDetailInsert(userDetail);
+			
+			
+			int userNoSearch = userDetailService.userNoSearch(userName, userPhone);
+			
+			payment.setUserNo(userNoSearch);
 			
 			//결제 데이터 입력
 			int paymentInsert = paymentService.paymentInsert(payment);
@@ -55,13 +74,12 @@ public class UserDetailController {
 			
 			if (userDetailInsert == 1 && paymentInsert == 1 ){
 				res = 1;
+				System.out.println("res=1");
 			} else{
 				res = 0;
+				System.out.println("res=0");
 			}
-			
-			
-			System.out.println(userDetailInsert);
-			model.addAttribute("userDetailInsert",userDetailInsert);
+
 		return res;
 	}
 }

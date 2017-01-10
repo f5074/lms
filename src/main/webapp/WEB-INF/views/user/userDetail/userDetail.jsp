@@ -181,8 +181,8 @@
 
 														<div class="pull-left">
 	
-															<div>회원검색 <a href="/lms/user/userDetail" type="button" class="btn btn-danger btn-xs">검색</a></div>
-															<div><input type="text" class="form-control" name="#"></div>
+															<div>회원검색 <a href="#" type="button" onclick="userSearch()" class="btn btn-danger btn-xs">검색</a></div>
+															<div><input type="text" class="form-control" name="userSearch" id="userSearch"></div>
 															<div>
 															
 <table>
@@ -428,15 +428,12 @@ $(document).ready(function(){
 					paymentMemo: paymentMemo
 				}
 			}).done(function(result){
-				if(result>0){
-					$("#modalContent").html("등록 성공");
-					$("#modal").modal("show");
+				if(result = 1){
+					alert("등록 성공")
 					document.location.href="/lms/index";
 
 				} else{
-					$("#modalContent").html("등록 실패");
-					$("#modal").modal("show");
-					document.location.href="/lms/index";
+					alert("등록실패")
 				}
 			})
 		
@@ -475,10 +472,14 @@ function paymentCostCheck(cost){
 }; 
 function seatNoCheck(){
 	var seatNo = $("#seatNo :selected").val();
-	alert(seatNo);
 	
 }
 
+function userSearch(){
+	
+	location.href="/lms/user/userDetail?userSearch="+$("#userSearch").val();
+
+}
 
 </script>	
 	

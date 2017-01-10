@@ -20,6 +20,9 @@ public interface UserDetailDao {
 	//회원이름과 회원 연락처 로 회원정보 받기
 	List<UserDetail> userDetailView2(@Param("userName") String userName, @Param("userPhone") String userPhone);
 	
+	//이름과 전화로 userNo찾기
+	int userNoSearch(@Param("userName") String userName, @Param("userPhone") String userPhone);
+	
 	//회원정보 추가하기
 	int userDetailInsert(UserDetail userDetail);
 

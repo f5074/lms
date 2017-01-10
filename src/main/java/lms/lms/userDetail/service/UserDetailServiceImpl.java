@@ -50,4 +50,12 @@ public class UserDetailServiceImpl implements UserDetailService{
 		return userDetailDao.userDetailView2(userName, userPhone);
 	}
 
+
+
+	@Override
+	public int userNoSearch(String userName, String userPhone) {
+		// TODO Auto-generated method stub
+		return userDetailDao.userNoSearch(userName, userPhone);
+	}
+
 }
