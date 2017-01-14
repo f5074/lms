@@ -9,9 +9,11 @@
 		<result property="checkInSMS" column="checkin_sms"/>
 		<result property="checkOutSMS" column="checkout_sms"/>
 	</resultMap>
-	<select id="attendanceList" parameterType="lms.lms.common.domain.Attendance" resultMap="attendanceMap">
-		SELECT attendance_no attendanceNo, user_no userNo, checkin_time checkInTime, checkout_time checkOutTime, checkin_sms checkInSMS, checkout_sms checkOutSMS 
-		FROM attendance ORDER BY attendance_no
+	<select id="attendanceList" parameterType="lms.lms.common.domain.Attendance" resultType="lms.lms.common.domain.Attendance">
+		SELECT  b.user_name userName, a.checkin_time checkInTime, a.checkout_time checkOutTime, a.checkin_sms checkInSMS, a.checkout_sms checkOutSMS 
+		FROM attendance a INNER JOIN user_detail b
+    	ON a.user_no = b.user_no
+    	ORDER BY a.attendance_no DESC
 	</select>
 	
 	<insert id="checkInTime" parameterType="int">

@@ -12,7 +12,15 @@ public class Payment {
 	private int paymentCost;
 	private String paymentPlan;	
 	private String paymentMemo;
+	private String userName;
 	
+	
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	public int getPaymentNo() {
 		return paymentNo;
 	}

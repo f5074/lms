@@ -171,7 +171,7 @@
 	
 	<c:forEach var="attendance" items="${attendance }">
 	<tr><td></td>
-		<td>${attendance.userNo }</td>
+		<td>${attendance.userName }</td>
 		<td>${attendance.checkInTime }</td>
 		<td>${attendance.checkOutTime }</td>
 		<td>${attendance.checkInSMS }</td>

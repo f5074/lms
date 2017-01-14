@@ -14,7 +14,16 @@ public class Attendance {
 	private String checkOutTime;
 	private String checkInSMS;
 	private String checkOutSMS;
+	private String userName;
 	
+	
+	
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	public int getAttendanceNo() {
 		return attendanceNo;
 	}

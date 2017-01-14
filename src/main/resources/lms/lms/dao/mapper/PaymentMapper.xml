@@ -9,11 +9,13 @@
 		<result property="paymentEnd" column="payment_end"></result>	
 		<result property="paymentCost" column="payment_cost"></result>	
 		<result property="paymentPlan" column="payment_plan"></result>	
-		<result property="paymentPlan" column="payment_memo"></result>	
+		<result property="paymentMemo" column="payment_memo"></result>	
 	</resultMap>
-	<select id="paymentList" parameterType="lms.lms.common.domain.Payment" resultMap="paymentMap">
-		SELECT *
-		FROM payment ORDER BY payment_no
+	<select id="paymentList" parameterType="lms.lms.common.domain.Payment" resultType="lms.lms.common.domain.Payment">
+		SELECT b.user_name userName, a.seat_no seatNo, a.payment_start paymentStart, a.payment_end paymentEnd, a.payment_cost paymentCost, a.payment_plan paymentPlan, a.payment_memo paymentMemo
+		FROM payment a INNER JOIN user_detail b
+		ON a.user_no = b.user_no
+		ORDER BY a.payment_no DESC
 	</select>
 	<insert id="paymentInsert"  parameterType="lms.lms.common.domain.Payment">	
 		INSERT INTO payment(user_no, seat_no, payment_start, payment_end, payment_cost, payment_plan, payment_memo)

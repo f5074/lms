@@ -171,7 +171,7 @@
 	
 	<c:forEach var="payment" items="${payment }">
 	<tr><td></td>
-		<td>${payment.userNo }</td>
+		<td>${payment.userName }</td>
 		<td>${payment.seatNo }</td>
 		<td>${payment.paymentStart }</td>
 		<td>${payment.paymentEnd }</td>
