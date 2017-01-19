@@ -8,7 +8,8 @@
 		   password="chamlib1"              
 		   driverClassName="com.mysql.jdbc.Driver"
 		   factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
-		   url="jdbc:mysql://112.175.50.189:3306/chamlib?autoReconnection=true" 
+		   url="jdbc:mysql://112.175.50.189:3306/chamlib"
+		   validationQuery="select 1"		    
 		   maxActive="10" 
 		   minIdle="2"/>	   
 		   
