@@ -27,6 +27,8 @@
 <script src="<c:url value="/js/demo.js"/>"></script>
 <link rel="stylesheet" href="<c:url value="/css/user/seat_table.css"/>">
 
+<!-- 로그아웃 추가 -->
+<script src="<c:url value="/js/logout.js"/>"></script>
 
 
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
@@ -149,7 +151,7 @@
 									<li class="dropdown"><a href="#" class="dropdown-toggle"
 										data-toggle="dropdown">${sid }</a>
 										<ul class="dropdown-menu" role="menu">
-											<li><a href="#">로그아웃</a></li>
+											<li id="logout"><a>로그아웃</a></li>
 										</ul>
 									</li>
 									

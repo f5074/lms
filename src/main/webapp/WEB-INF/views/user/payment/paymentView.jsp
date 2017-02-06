@@ -20,6 +20,9 @@
 <link rel="stylesheet" href="<c:url value="/css/_all-skins.min.css"/>">
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
+<!-- 로그아웃 추가 -->
+<script src="<c:url value="/js/logout.js"/>"></script>
+
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-blue layout-top-nav">
 	
@@ -155,7 +158,7 @@
 								</div>
 
 
-<table class='table no-margin'>
+<%-- <table class='table no-margin'>
 	<tr>
 		<th></th>
 		<th>회원이름</th>
@@ -180,12 +183,13 @@
 		<td>${payment.paymentMemo }</td>
 	</tr>
 	</c:forEach>
-</table>
+</table> --%>
 
 
 
 
-
+<div id="replyView" class="table-responsive"></div>
+<div id="replyPage" style="text-align: right"></div>
 
 
 
@@ -225,3 +229,39 @@
 	<script src="<c:url value="/js/app.min.js"/>"></script>
 	<!-- AdminLTE for demo purposes -->
 	<script src="<c:url value="/js/demo.js"/>"></script>
+	
+<script>
+function replyList(page) {
+	$.ajax({
+		url: "/user/payment/paymentView",
+		method: "GET",
+		success: function(result){
+			$("#replyView").html("<table id='replyTable' class='table no-margin'></table>");
+			$("#replyTable").append("<thead><tr><th></th><th style='width:60%; text-align:center;'>내용</th><th>아이디</th><th>작성일</th></thead>");
+			$("#replyTable").append("<tbody>")
+			for(var i=0; i<result.length; i++){
+				$("#replyTable").append(
+						"<tr>"
+						+"<td></td>"
+						+"<td style='width:60%; ' >"+result[i].userName+"</td>"
+						+"<td><span class='label label-success'>"+result[i].seatNo+"</span></td>"
+						+"<td>"+result[i].paymentStart+"</td>"
+						+"<td id='delBtn"+i+"'></td>"
+						+"</tr>");				
+			}
+			$("#replyTable").append("</tbody>");
+			
+		}
+	});
+};
+
+$(document).ready(function() {
+	
+	replyList();
+
+});
+
+</script>	
+
+	
+	

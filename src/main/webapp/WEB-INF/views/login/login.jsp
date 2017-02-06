@@ -35,7 +35,7 @@
 			<td width="1024" height="768" align="center" valign="middle">
 				<div style="width: 407px; border: 1px solid gray;">
 					<form method="post">
-						<h1>참 좋은 독서실</h1>
+						<a href="/lms/index"><h1>참 좋은 독서실</h1></a>
 						<table width="406" height="50" border="0">
 							<tr align="center" valign="middle">
 								<td width="104" height="32" align="right">아이디</td>

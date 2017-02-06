@@ -2,6 +2,8 @@ package lms.lms.payment.dao.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import lms.lms.common.domain.Payment;
 
 public interface PaymentMapper {
